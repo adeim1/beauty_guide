@@ -10,29 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_155021) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_134458) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quizzes", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "quiz_id", null: false
+  create_table "routine_products", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "routine_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["quiz_id"], name: "index_sessions_on_quiz_id"
-    t.index ["user_id"], name: "index_sessions_on_user_id"
+    t.index ["product_id"], name: "index_routine_products_on_product_id"
+    t.index ["routine_id"], name: "index_routine_products_on_routine_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "routines", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "points_range"
+    t.string "am_pm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "sessions", "quizzes"
-  add_foreign_key "sessions", "users"
+  add_foreign_key "routine_products", "products"
+  add_foreign_key "routine_products", "routines"
 end
