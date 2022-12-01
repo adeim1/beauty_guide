@@ -3,5 +3,4 @@ class Question < ApplicationRecord
   has_many :answers
   validates :description, presence: true
   # validates :has_points, precence: true
-  validates :points, numericality: true
 end
