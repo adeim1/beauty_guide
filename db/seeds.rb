@@ -111,9 +111,6 @@ hero_toner.save!
 
 # Oily
 
-peach_cleanser = Product.new(name: "Peach & Lily Power Calm Hydrating Gel Cleanser", price: 28, type: "cream")
-peach_cleanser.save!
-
 rl_dokdo_cream = Product.new(name: "ROUND LAB 1025 DOKDO Cream", price: 22, type: "cream")
 rl_dokdo_cream.save!
 
@@ -151,22 +148,26 @@ rl_birch_cream.save!
 cerave_cream = Product.new(name: "CeraVe Healing Ointment", price: 20, type: "cream")
 cerave_cream.save!
 
-cerave_cream = Product.new(name: "CeraVe PM Facial Moisturizing Lotion", price: 18.99, type: "cream")
-cerave_cream.save!
+cerave_cream_pm = Product.new(name: "CeraVe PM Facial Moisturizing Lotion", price: 18.99, type: "cream")
+cerave_cream_pm.save!
 
 puts 'Finished!'
 
 # puts 'Creating routine...'
 
-# # Routine
+# Routine
 
-# oily_skin = Routine.new(name: "Routin for oily skin", description: "Use spf every day before going outside, even if there is no sun", points_range: , am_pm: "am")
-# oily_skin.save!
+oily_skin = Routine.create!(name: "Routine for oily skin", am_pm: "AM")
+RoutineProduct.new(routine: oily_skin, product: rl_dokdo_cream, product: )
 
-# combi_skin = Routine.new(name: "Routin for combination skin",  description: "Use spf every day before going outside, even if there is no sun", points_range: , am_pm: "am")
+combi_skin = Routine.create!(name: "Routine for oily skin", am_pm: "AM")
+RoutineProduct.new(routine: combi_skin, product: rl_dokdo_cream, product:)
+
+
+# combi_skin = Routine.new(name: "Routin for combination skin",  description: "Use spf every day before going outside, even if there is no sun", points_range: , am_pm: "Am")
 # combi_skin.save!
 
-# dry_skin = Routin.new(name: "Routin for dry skin",  description: "Use spf every day before going outside, even if there is no sun", points_range: , am_pm: "am")
+# dry_skin = Routin.new(name: "Routin for dry skin",  description: "Use spf every day before going outside, even if there is no sun", points_range: , am_pm: "Am")
 # dry_skin.save!
 
 
