@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.btn {
+  width: 250px;
+  height: 150px;
+  background-color: §light-blue;
+  color:black
+}
