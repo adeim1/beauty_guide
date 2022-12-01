@@ -4,5 +4,5 @@ class Product < ApplicationRecord
     message: "%{value} is not a valid product type" }
   validates :name, presence: true
   validates :price, presence: true
-  validates :type, presence: true
+  belongs_to :category
 end
