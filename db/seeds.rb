@@ -12,47 +12,158 @@ quiz = Quiz.new
 puts "Quiz created"
 
 user_question = Question.new(description: "How old are you?",
-                            has_points: false,
-                            points: 0,
-                            quiz: quiz
-)
+                             has_points: false,
+                             points: 0,
+                             quiz: quiz
+                            )
 user_question.save!
-puts "Question created"
+puts "User question created"
 
-answer_1 = Answer.create!(text: "18-29", question: user_question)
+answer_1 = Answer.create!(text: "18-29",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0,
+                         )
 puts "Answer created"
 
 # UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
+question_one = Question.new(description: "What is your skin type",
+                            quiz: quiz
+                           )
+question_one.save!
+puts "Question 1 created"
 
-# question_one = Question.new(question: "what are your main skin concerns?",
-#                             answer_one: "Signs of aging?",
-#                             answer_two: "Acne and clogged pores",
-#                             answer_three: "Uneven skin tone, pigmentation",
-#                             answer_four: "Oilliness",
-#                             answer_five: "Senistivity and dryness")
-# question_one.save!
+answer_1 = Answer.create!(text: "Oily",
+                          question: user_question,
+                          # has_points: true,
+                          points: 1
+                         )
+answer_2 = Answer.create!(text: "Combination",
+                          question: user_question,
+                          # has_points: true,
+                          points: 2
+                         )
+answer_3 = Answer.create!(text: "Dry",
+                          question: user_question,
+                          # has_points: true,
+                          points: 3
+                         )
+puts "Answers created"
 
-# question_two = Question.new(question: "Is your skin sensitve",
-#                             answer_one: "Yes",
-#                             answer_two: "Yes, it can be")
-# question_two.save!
+question_two = Question.new(description: "What are your main skin concerns?",
+                            has_points: false,
+                            quiz: quiz
+                           )
+question_two.save!
+puts "Question 2 created"
 
-# question_three = Question.new(question: "Would you say your skin is darker or lighter than this color",
-#                               answer_one: "No",
-#                               answer_two: "This color or lighter")
-# question_three.save!
+answer_1 = Answer.create!(text: "Signs of aging?",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+answer_2 = Answer.create!(text: "Acne and clogged pores",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+answer_3 = Answer.create!(text: "Uneven skin tone, pigmentation",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+answer_4 = Answer.create!(text: "Oilliness",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+answer_5 = Answer.create!(text: "Senistivity and dryness",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+puts "Answers created"
 
-# question_four = Question.new(question: "What skincare textures do you prefer?",
-#                              answer_one: "Light gels, lotion, fluids",
-#                              answer_two: "Rich creams, balms",
-#                              answer_three: "Any texture - as long as the product works")
-# question_four.save!
+question_three = Question.new(description: "Is your skin sensitve",
+                              quiz: quiz,
+                              has_points: true
+                             )
+question_three.save!
+puts "Question 3 created"
 
-# question_five = Question.new(question: "How often are you using skincare products today?",
-#                              answer_one: "never",
-#                              answer_two: "once and twice a week",
-#                              answer_three: "everyday")
-# question_five.save!
+answer_1 = Answer.create!(text: "No",
+                          question: user_question,
+                          # has_points: false,
+                          points: 0
+                         )
+answer_2 = Answer.create!(text: "Yes, it can be",
+                          question: user_question,
+                          # has_points: false,
+                          points: 10
+                         )
+puts "Answers created"
+
+question_four = Question.new(question: "Would you say your skin is darker or lighter than this color",
+                             has_points: false,
+                             quiz: quiz
+                            )
+question_four.save!
+puts "Question 4 created"
+
+answer_1 = Answer.create!(text: "No",
+                          question: user_question,
+                          points: 0
+                         )
+answer_2 = Answer.create!(text: "This color or lighter",
+                          question: user_question,
+                          points: 0
+                        )
+puts "Answer created"
+
+question_five = Question.new(question: "What skincare textures do you prefer?",
+                             has_points: false,
+                             points: 0,
+                             quiz: quiz
+                            )
+question_five.save!
+puts "Question 5 created"
+
+answer_1 = Answer.create!(text: "Light gels, lotion, fluids",
+                          question: user_question,
+                          points: 0
+                         )
+answer_2 = Answer.create!(text: "Rich creams, balms",
+                          question: user_question,
+                          points: 0
+                         )
+answer_3 = Answer.create!(text: "Any texture - as long as the product works",
+                          question: user_question,
+                          points: 0
+                         )
+puts "Answers created"
+
+
+question_six = Question.new(question: "How often are you using skincare products today?",
+                            has_points: false,
+                            points: 0,
+                            quiz: quiz
+                           )
+question_six.save!
+puts "Question 6 created"
+
+answer_1 = Answer.create!(text: "Never",
+                          question: user_question,
+                          points: 0
+                        )
+answer_2 = Answer.create!(text: "Ence and twice a week",
+                          question: user_question,
+                          points: 0
+                        )
+answer_3 = Answer.create!(text: "Everyday",
+                          question: user_question,
+                          points: 0
+                        )
+puts "Answers created"
 
 puts 'Creating products...'
 
