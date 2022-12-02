@@ -6,25 +6,30 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@test.com", password: "123456")
+
+# AnswerClass:  @user_answer: string, @category_linked_to_answer
+# def ChooseRightCategoryForUserBasedOnAnswers() do
+
+# user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
 
 quiz = Quiz.new
 puts "Quiz created"
 
-user_question = Question.new(description: "How old are you?",
-                             has_points: false,
-                             points: 0,
-                             quiz: quiz
-                            )
-user_question.save!
-puts "User question created"
+# user_question = Question.new(description: "How old are you?",
+#                              has_points: false,
+#                              quiz: quiz
+#                             )
+# user_question.save!
+# puts "User question created"
 
-answer_1 = Answer.create!(text: "18-29",
-                          question: user_question,
-                          # has_points: false,
-                          points: 0,
-                         )
-puts "Answer created"
+# answer_age = Answer.new(text: "18-29",
+#                           # has_points: false,
+#                           points: 0,
+#                          )
+# puts "Answer created"
+
+# answer_age.question = user_question
+# answer_age.save!
 
 # UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
 question_one = Question.new(description: "What is your skin type",
@@ -33,56 +38,65 @@ question_one = Question.new(description: "What is your skin type",
 question_one.save!
 puts "Question 1 created"
 
-answer_1 = Answer.create!(text: "Oily",
-                          question: user_question,
+answer_one = Answer.new(text: "Oily",
                           # has_points: true,
                           points: 1
                          )
-answer_2 = Answer.create!(text: "Combination",
-                          question: user_question,
+answer_one.question = question_one
+answer_one.save!
+
+answer_two = Answer.new(text: "Combination",
                           # has_points: true,
                           points: 2
                          )
-answer_3 = Answer.create!(text: "Dry",
-                          question: user_question,
+answer_two.question = question_one
+answer_two.save!
+answer_three = Answer.new(text: "Dry",
                           # has_points: true,
                           points: 3
                          )
-puts "Answers created"
+answer_three.question = question_one
+answer_three.save!
+puts "Answers created to question 1"
 
 question_two = Question.new(description: "What are your main skin concerns?",
-                            has_points: false,
+                            # has_points: false,
                             quiz: quiz
                            )
 question_two.save!
 puts "Question 2 created"
 
-answer_1 = Answer.create!(text: "Signs of aging?",
-                          question: user_question,
+answer_one = Answer.new(text: "Signs of aging?",
                           # has_points: false,
                           points: 0
                          )
-answer_2 = Answer.create!(text: "Acne and clogged pores",
-                          question: user_question,
+answer_one.question = question_two
+answer_one.save!
+answer_two = Answer.new(text: "Acne and clogged pores",
                           # has_points: false,
                           points: 0
                          )
-answer_3 = Answer.create!(text: "Uneven skin tone, pigmentation",
-                          question: user_question,
+answer_two.question = question_two
+answer_two.save!
+answer_three = Answer.new(text: "Uneven skin tone, pigmentation",
                           # has_points: false,
                           points: 0
                          )
-answer_4 = Answer.create!(text: "Oilliness",
-                          question: user_question,
+answer_three.question = question_two
+answer_three.save!
+answer_four = Answer.new(text: "Oilliness",
                           # has_points: false,
                           points: 0
                          )
-answer_5 = Answer.create!(text: "Senistivity and dryness",
-                          question: user_question,
+answer_four.question = question_two
+answer_four.save!
+answer_five = Answer.new(text: "Senistivity and dryness",
                           # has_points: false,
                           points: 0
-                         )
-puts "Answers created"
+                        )
+answer_five.question = question_two
+answer_five.save!
+puts "Answers created to question 2"
 
 question_three = Question.new(description: "Is your skin sensitve",
                               quiz: quiz,
@@ -91,79 +105,87 @@ question_three = Question.new(description: "Is your skin sensitve",
 question_three.save!
 puts "Question 3 created"
 
-answer_1 = Answer.create!(text: "No",
-                          question: user_question,
-                          # has_points: false,
-                          points: 0
+answer_one = Answer.new(text: "No",
+                        # has_points: false,
+                        points: 0
+                        )
+answer_one.question = question_three
+answer_one.save!
+answer_two = Answer.new(text: "Yes, it can be",
+                        # has_points: false,
+                        points: 10
                          )
-answer_2 = Answer.create!(text: "Yes, it can be",
-                          question: user_question,
-                          # has_points: false,
-                          points: 10
-                         )
-puts "Answers created"
+answer_two.question = question_three
+answer_two.save!
+puts "Answers created to question 3"
 
-question_four = Question.new(question: "Would you say your skin is darker or lighter than this color",
-                             has_points: false,
+question_four = Question.new(description: "Would you say your skin is darker or lighter than this color",
+                            #  has_points: false,
                              quiz: quiz
                             )
 question_four.save!
 puts "Question 4 created"
 
-answer_1 = Answer.create!(text: "No",
-                          question: user_question,
-                          points: 0
+answer_one = Answer.new(text: "No",
+                        points: 0
                          )
-answer_2 = Answer.create!(text: "This color or lighter",
-                          question: user_question,
+answer_one.question = question_four
+answer_one.save!
+answer_two = Answer.new(text: "This color or lighter",
                           points: 0
                         )
-puts "Answer created"
+answer_two.question = question_four
+answer_two.save!
+puts "Answer created to question 4"
 
-question_five = Question.new(question: "What skincare textures do you prefer?",
-                             has_points: false,
-                             points: 0,
+question_five = Question.new(description: "What skincare textures do you prefer?",
+                            #  has_points: false,
                              quiz: quiz
                             )
 question_five.save!
 puts "Question 5 created"
 
-answer_1 = Answer.create!(text: "Light gels, lotion, fluids",
-                          question: user_question,
+answer_one = Answer.new(text: "Light gels, lotion, fluids",
+                        points: 0
+                         )
+answer_one.question = question_five
+answer_one.save!
+answer_two = Answer.new(text: "Rich creams, balms",
                           points: 0
                          )
-answer_2 = Answer.create!(text: "Rich creams, balms",
-                          question: user_question,
+answer_two.question = question_five
+answer_two.save!
+answer_three = Answer.new(text: "Any texture - as long as the product works",
                           points: 0
                          )
-answer_3 = Answer.create!(text: "Any texture - as long as the product works",
-                          question: user_question,
-                          points: 0
-                         )
-puts "Answers created"
+answer_three.question = question_five
+answer_three.save!
+puts "Answers created to question 5"
 
 
-question_six = Question.new(question: "How often are you using skincare products today?",
-                            has_points: false,
-                            points: 0,
+question_six = Question.new(description: "How often are you using skincare products today?",
+                            # has_points: false,
                             quiz: quiz
                            )
 question_six.save!
 puts "Question 6 created"
 
-answer_1 = Answer.create!(text: "Never",
-                          question: user_question,
+answer_one = Answer.new(text: "Never",
                           points: 0
                         )
-answer_2 = Answer.create!(text: "Ence and twice a week",
-                          question: user_question,
+answer_one.question = question_six
+answer_one.save!
+answer_two = Answer.new(text: "Ence and twice a week",
                           points: 0
                         )
-answer_3 = Answer.create!(text: "Everyday",
-                          question: user_question,
+answer_two.question = question_six
+answer_two.save!
+answer_three = Answer.new(text: "Everyday",
                           points: 0
                         )
-puts "Answers created"
+answer_three.question = question_six
+answer_three.save!
+puts "Answers created to question 6"
 
 puts 'Creating products...'
 
