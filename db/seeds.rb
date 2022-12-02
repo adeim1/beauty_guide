@@ -32,9 +32,10 @@ puts "Quiz created"
 # answer_age.save!
 
 # UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
-question_one = Question.new(description: "What is your skin type",
+question_one = Question.new(description: "What is your skin type?",
                             quiz: quiz
-                           )
+                          )
+
 question_one.save!
 puts "Question 1 created"
 
