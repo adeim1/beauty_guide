@@ -1,0 +1,8 @@
+<div class="container">
+<%= @question.description %>
+<%= simple_form_for @user_answer do |f| %>
+<%= hidden_field_tag :question, @question.id %>
+<%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
+<%= f.submit "next" %>
+<% end %>
+</div>
