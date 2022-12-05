@@ -11,7 +11,11 @@
 # def ChooseRightCategoryForUserBasedOnAnswers() do
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
-
+Answer.destroy_all
+Question.destroy_all
+RoutineProduct.destroy_all
+Routine.destroy_all
+Product.destroy_all
 quiz = Quiz.new
 puts "Quiz created"
 
@@ -40,20 +44,20 @@ puts "Question 1 created"
 
 answer_one = Answer.new(text: "Oily",
                           # has_points: true,
-                          points: 1
+                          points: 0
                          )
 answer_one.question = question_one
 answer_one.save!
 
 answer_two = Answer.new(text: "Combination",
                           # has_points: true,
-                          points: 2
+                          points: 0
                          )
 answer_two.question = question_one
 answer_two.save!
 answer_three = Answer.new(text: "Dry",
                           # has_points: true,
-                          points: 3
+                          points: 0
                          )
 answer_three.question = question_one
 answer_three.save!
@@ -113,7 +117,7 @@ answer_one.question = question_three
 answer_one.save!
 answer_two = Answer.new(text: "Yes, it can be",
                         # has_points: false,
-                        points: 10
+                        points: 0
                          )
 answer_two.question = question_three
 answer_two.save!
@@ -390,6 +394,26 @@ puts 'Finished!'
 # puts 'Creating routine...'
 
 # Routine am
+oily = Routine.create!(routine: oily,
+                       #  am_pm: “AM”,
+                       points_range: 0
+                      )
+product_one = RoutineProduct.new(routine: oily,
+                                 product: yttp_cleanser
+                                )
+product_one.save!
+product_two = RoutineProduct.new(routine: oily,
+                                 product: hero_toner_oily
+                                )
+product_two.save!
+product_three = RoutineProduct.new(routine: oily,
+                                   product: rovectin_cream
+                                  )
+product_three.save!
+product_four = RoutineProduct.new(routine: oily,
+                                  product: rl_dokdo_spf
+                                 )
+product_four.save!
 
 # oily cream am
 
