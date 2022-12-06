@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   has_many :user_answers
   has_many :answers, through: :user_answers
+  has_many :user_routines
+  # has_many routines, through: user_answers
 end

@@ -6,4 +6,5 @@ class Routine < ApplicationRecord
   validates :name, presence: true
   validates :points_range, presence: true
   validates :am_pm, presence: true
+  has_many :user_routines
 end

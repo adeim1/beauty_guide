@@ -96,12 +96,13 @@ answer_four = Answer.new(text: "Oilliness",
                          )
 answer_four.question = question_two
 answer_four.save!
-answer_five = Answer.new(text: "Senistivity and dryness",
+answer_five = Answer.new(text: "None",
                           # has_points: false,
                           points: 0
                         )
 answer_five.question = question_two
 answer_five.save!
+
 puts "Answers created to question 2"
 
 question_three = Question.new(description: "Is your skin sensitve?",
