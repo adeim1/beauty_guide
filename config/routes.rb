@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   #   end
   # end
   get "/routines/:id", to: "routines#show"
+  resources :products, only: :index
 end
 
 # resourses

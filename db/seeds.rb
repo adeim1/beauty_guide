@@ -11,15 +11,15 @@
 # def ChooseRightCategoryForUserBasedOnAnswers() do
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
-puts "Cleaning DB"
-RoutineProduct.delete_all
-Routine.delete_all
-Product.delete_all
-Answer.delete_all
-Question.delete_all
-Quiz.delete_all
+#puts "Cleaning DB"
+#RoutineProduct.delete_all
+#Routine.delete_all
+#Product.delete_all
+#Answer.delete_all
+#Question.delete_all
+#Quiz.delete_all'
 
-puts "DB is clear!"
+#puts "DB is clear!"
 
 quiz = Quiz.new
 puts "Quiz created"
