@@ -3,6 +3,9 @@
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
 
+
+
+
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
@@ -13,6 +16,7 @@ Question.delete_all
 Quiz.delete_all
 
 puts "DB is clear!"
+
 quiz = Quiz.new
 puts "Quiz created"
 
@@ -393,6 +397,9 @@ force_spf.save!
 
 puts 'Finished products!'
 
+
+# Routine am
+
 puts "Creating routine for oily skin"
 
 oily = Routine.create!(name: "Routine for oily skin",
@@ -419,6 +426,7 @@ product_four = RoutineProduct.new(routine: oily,
                                  product: scinic_spf
                                  )
 product_four.save!
+
 
 puts "Routin for oily skin is done!"
 

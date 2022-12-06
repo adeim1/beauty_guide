@@ -9,3 +9,9 @@ class UserAnswersController < ApplicationController
     end
   end
 end
+
+if user_answer = Answer.last
+
+end
+# if the user answers the last question of the quiz
+# redirect them to their routine
