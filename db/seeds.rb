@@ -72,7 +72,7 @@ question_two = Question.new(description: "What are your main skin concerns?",
 question_two.save!
 puts "Question 2 created"
 
-answer_one = Answer.new(text: "Signs of aging?",
+answer_one = Answer.new(text: "Signs of aging",
                           # has_points: false,
                           points: 0
                          )
@@ -125,43 +125,43 @@ answer_two.question = question_three
 answer_two.save!
 puts "Answers created to question 3"
 
-question_four = Question.new(description: "Would you say your skin is darker or lighter than this color",
+question_four = Question.new(description: "Choose your skin color",
                             #  has_points: false,
                              quiz: quiz
                             )
 question_four.save!
 puts "Question 4 created"
 
-answer_one = Answer.new(text: "No",
+answer_one = Answer.new(text: "Dark",
                         points: 0
                          )
 answer_one.question = question_four
 answer_one.save!
-answer_two = Answer.new(text: "This color or lighter",
+answer_two = Answer.new(text: "Light",
                           points: 0
                         )
 answer_two.question = question_four
 answer_two.save!
 puts "Answer created to question 4"
 
-question_five = Question.new(description: "What skincare textures do you prefer?",
+question_five = Question.new(description: "What kind product textures do you prefer?",
                             #  has_points: false,
                              quiz: quiz
                             )
 question_five.save!
 puts "Question 5 created"
 
-answer_one = Answer.new(text: "Light gels, lotion, fluids",
+answer_one = Answer.new(text: "Creams and balms",
                         points: 0
                          )
 answer_one.question = question_five
 answer_one.save!
-answer_two = Answer.new(text: "Rich creams, balms",
+answer_two = Answer.new(text: "Gels and lotions",
                           points: 0
                          )
 answer_two.question = question_five
 answer_two.save!
-answer_three = Answer.new(text: "Any texture - as long as the product works",
+answer_three = Answer.new(text: "Any texture",
                           points: 0
                          )
 answer_three.question = question_five
@@ -169,24 +169,24 @@ answer_three.save!
 puts "Answers created to question 5"
 
 
-question_six = Question.new(description: "How often are you using skincare products today?",
+question_six = Question.new(description: "How often are you using skincare products?",
                             # has_points: false,
                             quiz: quiz
                            )
 question_six.save!
 puts "Question 6 created"
 
-answer_one = Answer.new(text: "Never",
+answer_one = Answer.new(text: "Everyday",
                           points: 0
                         )
 answer_one.question = question_six
 answer_one.save!
-answer_two = Answer.new(text: "Ence and twice a week",
+answer_two = Answer.new(text: "Once and twice a week",
                           points: 0
                         )
 answer_two.question = question_six
 answer_two.save!
-answer_three = Answer.new(text: "Everyday",
+answer_three = Answer.new(text: "Never",
                           points: 0
                         )
 answer_three.question = question_six
@@ -215,7 +215,7 @@ tula_cleanser = Product.new(name: "Tula 3-in-1 Acne Cleanser, Mask & Spot Treatm
 tula_cleanser.category = cleanser
 tula_cleanser.save!
 
-cerave_cleanser = Product.new(name: "CeraVe Foaming Cleanser for Normal to Oily Skin", price: 26)
+cerave_cleanser = Product.new(name: "CeraVe Foaming Cleanser for Normal to Oily Skin", price: 15)
 cerave_cleanser.category = cleanser
 cerave_cleanser.save!
 
@@ -233,10 +233,6 @@ rl_birch_cleanser = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cleans
 rl_birch_cleanser.category = cleanser
 rl_birch_cleanser.save!
 
-cerave_cleanser_combi = Product.new(name: "CeraVe Foaming Cleanser for Normal to Oily Skin", price: 26)
-cerave_cleanser_combi.category = cleanser
-cerave_cleanser_combi.save!
-
 # Dry
 krave_cleanser = Product.new(name: "Krave Beauty Matcha Hemp Hydrating Cleanser", price: 16)
 krave_cleanser.category = cleanser
@@ -250,13 +246,9 @@ peach_cleanser = Product.new(name: "Peach & Lily Power Calm Hydrating Gel Cleans
 peach_cleanser.category = cleanser
 peach_cleanser.save!
 
-aveeno_cleanser_dry = Product.new(name: "Aveeno Calm and Restore Nourishing Oat Cleanser", price: 10)
-aveeno_cleanser_dry.category = cleanser
-aveeno_cleanser_dry.save!
-
-rl_birch_cleanser_dry = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cleanser", price: 14.30)
-rl_birch_cleanser_dry.category = cleanser
-rl_birch_cleanser_dry.save!
+aveeno_cleanser = Product.new(name: "Aveeno Calm and Restore Nourishing Oat Cleanser", price: 10)
+aveeno_cleanser.category = cleanser
+aveeno_cleanser.save!
 
 # Toner
 
@@ -270,53 +262,20 @@ rl_mugwort_toner = Product.new(name: "ROUND LAB Mugwort Calming Toner", price: 1
 rl_mugwort_toner.category = toner
 rl_mugwort_toner.save!
 
-hero_toner_oily = Product.new(name: "Clear Collective Toner from Hero Cosmetics", price: 12)
-hero_toner_oily.category = toner
-hero_toner_oily.save!
-
-# Combi
-
-rl_dokdo_toner_combi = Product.new(name: "ROUND LAB Dokdo Toner", price: 17)
-rl_dokdo_toner_combi.category = toner
-rl_dokdo_toner_combi.save!
-
-rl_mugwort_toner_combi = Product.new(name: "ROUND LAB Mugwort Calming Toner", price: 18)
-rl_mugwort_toner_combi.category = toner
-rl_mugwort_toner_combi.save!
-
-hero_toner_combi = Product.new(name: "Clear Collective Toner from Hero Cosmetics", price: 12)
-hero_toner_combi.category = toner
-hero_toner_combi.save!
+hero_toner = Product.new(name: "Clear Collective Toner from Hero Cosmetics", price: 12)
+hero_toner.category = toner
+hero_toner.save!
 
 # Dry
 
-rl_birch_toner_dry = Product.new(name: "ROUND LAB Birch Juice Moisturizing Toner", price: 19)
-rl_birch_toner_dry.category = toner
-rl_birch_toner_dry.save!
-
-rl_dokdo_toner_dry = Product.new(name: "ROUND LAB Dokdo Toner", price: 17)
-rl_dokdo_toner_dry.category = toner
-rl_dokdo_toner_dry.save!
-
-hero_toner_dry = Product.new(name: "Clear Collective Toner from Hero Cosmetics", price: 12)
-hero_toner_dry.category = toner
-hero_toner_dry.save!
-
-rl_mugwort_toner_dry = Product.new(name: "ROUND LAB Mugwort Calming Toner", price: 18)
-rl_mugwort_toner_dry.category = toner
-rl_mugwort_toner_dry.save!
+rl_birch_toner = Product.new(name: "ROUND LAB Birch Juice Moisturizing Toner", price: 19)
+rl_birch_toner.category = toner
+rl_birch_toner.save!
 
 # Cream
 
 # Oily
 puts "creating product Creams"
-rl_dokdo_cream_oily = Product.new(name: "ROUND LAB 1025 DOKDO Cream", price: 22)
-rl_dokdo_cream_oily.category = cream
-rl_dokdo_cream_oily.save!
-
-rl_mugwort_cream_oily = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 28)
-rl_mugwort_cream_oily.category = cream
-rl_mugwort_cream_oily.save!
 
 rovectin_cream = Product.new(name: "Rovectin Lotus Water Cream", price: 20)
 rovectin_cream.category = cream
@@ -332,13 +291,9 @@ byoma_cream = Product.new(name: "Byoma Moisturizing Gel Cream", price: 14)
 byoma_cream.category = cream
 byoma_cream.save!
 
-rl_dokdo_cream_combi = Product.new(name: "ROUND LAB 1025 DOKDO Cream", price: 22)
-rl_dokdo_cream_combi.category = cream
-rl_dokdo_cream_combi.save!
-
-rl_mugwort_cream_combi = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 28)
-rl_mugwort_cream_combi.category = cream
-rl_mugwort_cream_combi.save!
+rl_dokdo_cream = Product.new(name: "ROUND LAB 1025 DOKDO Cream", price: 22)
+rl_dokdo_cream.category = cream
+rl_dokdo_cream.save!
 
 # Dry
 
@@ -346,21 +301,21 @@ rl_soybean_cream_dry = Product.new(name: "ROUND LAB Soybean Nourishing Cream", p
 rl_soybean_cream_dry.category = cream
 rl_soybean_cream_dry.save!
 
-rl_mugwort_cream_dry = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 26)
-rl_mugwort_cream_dry.category = cream
-rl_mugwort_cream_dry.save!
+rl_mugwort_cream = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 26)
+rl_mugwort_cream.category = cream
+rl_mugwort_cream.save!
 
-rl_birch_cream_dry = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cream", price: 28)
-rl_birch_cream_dry.category = cream
-rl_birch_cream_dry.save!
+rl_birch_cream = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cream", price: 28)
+rl_birch_cream.category = cream
+rl_birch_cream.save!
 
-cerave_cream_dry = Product.new(name: "CeraVe Healing Ointment", price: 20)
-cerave_cream_dry.category = cream
-cerave_cream_dry.save!
+cerave_cream = Product.new(name: "CeraVe Healing Ointment", price: 20)
+cerave_cream.category = cream
+cerave_cream.save!
 
-cerave_cream_pm_dry = Product.new(name: "CeraVe PM Facial Moisturizing Lotion", price: 18.99)
-cerave_cream_pm_dry.category = cream
-cerave_cream_pm_dry.save!
+cerave_cream_pm = Product.new(name: "CeraVe PM Facial Moisturizing Lotion", price: 18.99)
+cerave_cream_pm.category = cream
+cerave_cream_pm.save!
 
 puts "creating spf products"
 inistree_spf = Product.new(name: "Isntree Hyaluronic Acid Watery Sun Gel SPF50+", price: 26)
@@ -413,7 +368,7 @@ product_one = RoutineProduct.new(routine: oily,
 product_one.save!
 
 product_two = RoutineProduct.new(routine: oily,
-                                product: hero_toner_combi
+                                product: hero_toner
                                 )
 product_two.save!
 
@@ -443,12 +398,12 @@ product_one = RoutineProduct.new(routine: combi,
 product_one.save!
 
 product_two = RoutineProduct.new(routine: combi,
-                                product: hero_toner_oily
+                                product: hero_toner
                                 )
 product_two.save!
 
 product_three = RoutineProduct.new(routine: combi,
-                                  product: rl_dokdo_cream_combi
+                                  product: rl_dokdo_cream
                                   )
 product_three.save!
 
@@ -472,12 +427,12 @@ product_one = RoutineProduct.new(routine: dry,
 product_one.save!
 
 product_two = RoutineProduct.new(routine: dry,
-                                product: rl_birch_toner_dry
+                                product: rl_birch_toner
                                 )
 product_two.save!
 
 product_three = RoutineProduct.new(routine: dry,
-                                  product: rl_birch_cream_dry
+                                  product: rl_birch_cream
                                   )
 product_three.save!
 
@@ -506,7 +461,7 @@ product_two = RoutineProduct.new(routine: oily_sensitive,
 product_two.save!
 
 product_three = RoutineProduct.new(routine: oily_sensitive,
-                                  product: rl_mugwort_cream_oily
+                                  product: rl_mugwort_cream
                                   )
 product_three.save!
 
@@ -530,12 +485,12 @@ product_one = RoutineProduct.new(routine: combi_sensitive,
 product_one.save!
 
 product_two = RoutineProduct.new(routine: combi_sensitive,
-                                product: rl_mugwort_toner_combi
+                                product: rl_mugwort_toner
                                 )
 product_two.save!
 
 product_three = RoutineProduct.new(routine: combi_sensitive,
-                                  product: rl_mugwort_cream_combi
+                                  product: rl_mugwort_cream
                                   )
 product_three.save!
 
@@ -554,17 +509,17 @@ dry_sensitive = Routine.create!(name: "Routine for dry sensitive skin",
                        )
 
 product_one = RoutineProduct.new(routine: dry_sensitive,
-                                product: aveeno_cleanser_dry
+                                product: aveeno_cleanser
                                 )
 product_one.save!
 
 product_two = RoutineProduct.new(routine: dry_sensitive,
-                                product: rl_mugwort_toner_dry
+                                product: rl_mugwort_toner
                                 )
 product_two.save!
 
 product_three = RoutineProduct.new(routine: dry_sensitive,
-                                  product: rl_birch_cream_dry
+                                  product: rl_birch_cream
                                   )
 product_three.save!
 
@@ -578,32 +533,267 @@ puts "Routin for dry sensitive skin done!"
 
 puts "Creating Routine for oily aging skin"
 
-# oily_aging = Routine.create!(name: "Routine for  oily aging skin",
-#                         am_pm: "AM",
-#                         points_range: 0
-#                        )
+oily_aging = Routine.create!(name: "Routine for oily aging skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
 
-# product_one = RoutineProduct.new(routine: dry_sensitive,
-#                                 product: aveeno_cleanser_dry
-#                                 )
-# product_one.save!
+product_one = RoutineProduct.new(routine: oily_aging,
+                                product: cerave_cleanser
+                                )
+product_one.save!
 
-# product_two = RoutineProduct.new(routine: dry_sensitive,
-#                                 product: rl_mugwort_toner_dry
-#                                 )
-# product_two.save!
+product_two = RoutineProduct.new(routine: oily_aging,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
 
-# product_three = RoutineProduct.new(routine: dry_sensitive,
-#                                   product: rl_birch_cream_dry
-#                                   )
-# product_three.save!
+product_three = RoutineProduct.new(routine: oily_aging,
+                                  product: rl_soybean_cream
+                                  )
+product_three.save!
 
-# product_four = RoutineProduct.new(routine: dry_sensitive,
-#                                  product: rl_birch_spf
-#                                  )
-# product_four.save!
+product_four = RoutineProduct.new(routine: oily_aging,
+                                 product: beauty_of_joseon_spf
+                                 )
+product_four.save!
 
-puts "Routin for dry sensitive skin done!"
+puts "Routin for oily aging skin done!"
+
+puts "Creating Routine for combi aging skin"
+
+combi_aging = Routine.create!(name: "Routine for combi aging skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: combi_aging,
+                                product: hyram_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: combi_aging,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: combi_aging,
+                                  product: rl_soybean_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: combi_aging,
+                                 product: beauty_of_joseon_spf
+                                 )
+product_four.save!
+
+puts "Routin for combi aging skin done!"
+
+puts "Creating Routine for dry aging skin"
+
+dry_aging = Routine.create!(name: "Routine for dry aging skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: dry_aging,
+                                product: krave_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: dry_aging,
+                                product: rl_birch_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: dry_aging,
+                                  product: rl_soybean_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: dry_aging,
+                                 product: rl_birch_spf
+                                 )
+product_four.save!
+
+puts "Routin for dry aging skin done!"
+
+puts "Creating Routine for oily acne skin"
+
+oily_acne = Routine.create!(name: "Routine for oily acne skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: oily_acne,
+                                product: inkey_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: oily_acne,
+                                product: hero_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: oily_acne,
+                                  product: rl_dokdo_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: oily_acne,
+                                 product: scinic_spf
+                                 )
+product_four.save!
+
+puts "Routin for oily acne skin done!"
+
+puts "Creating Routine for combi acne skin"
+
+combi_acne = Routine.create!(name: "Routine for combi acne skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: combi_acne,
+                                product: hyram_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: combi_acne,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: combi_acne,
+                                  product: rl_dokdo_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: combi_acne,
+                                 product: scinic_spf
+                                 )
+product_four.save!
+
+puts "Routin for combi acne skin done!"
+
+puts "Creating Routine for dry acne skin"
+
+dry_acne = Routine.create!(name: "Routine for dry acne skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: dry_acne,
+                                product: aveeno_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: dry_acne,
+                                product: rl_mugwort_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: dry_acne,
+                                  product: rl_mugwort_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: dry_acne,
+                                 product: inistree_spf
+                                 )
+product_four.save!
+
+puts "Routin for dry acne skin done!"
+
+puts "Creating Routine for oily pigmentation skin"
+
+oily_pigment = Routine.create!(name: "Routine for oily pigmentation skin",
+                             am_pm: "AM",
+                             points_range: 0
+                            )
+
+product_one = RoutineProduct.new(routine: oily_pigment,
+                                product: tula_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: oily_pigment,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: oily_pigment,
+                                  product: rl_dokdo_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: oily_pigment,
+                                 product: force_spf
+                                 )
+product_four.save!
+
+puts "Routin for oily pigmentation skin done!"
+
+puts "Creating Routine for combi pigmentation skin"
+
+combi_pigment = Routine.create!(name: "Routine for combi pigmentation skin",
+                                am_pm: "AM",
+                                points_range: 0
+                               )
+
+product_one = RoutineProduct.new(routine: combi_pigment,
+                                product: tula_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: combi_pigment,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: combi_pigment,
+                                  product: rl_dokdo_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: combi_pigment,
+                                 product: force_spf
+                                 )
+product_four.save!
+
+puts "Routin for combi pigmentation skin done!"
+
+puts "Creating Routine for dry pigmentation skin"
+dry_pigment = Routine.create!(name: "Routine for dry pigmentation skin",
+                                am_pm: "AM",
+                                points_range: 0
+                               )
+
+product_one = RoutineProduct.new(routine: dry_pigment,
+                                product: krave_cleanser
+                                )
+product_one.save!
+
+product_two = RoutineProduct.new(routine: dry_pigment,
+                                product: rl_dokdo_toner
+                                )
+product_two.save!
+
+product_three = RoutineProduct.new(routine: dry_pigment,
+                                  product: rl_dokdo_cream
+                                  )
+product_three.save!
+
+product_four = RoutineProduct.new(routine: dry_pigment,
+                                 product: beauty_of_joseon_spf
+                                 )
+product_four.save!
+
+puts "Routin for dry pigmentation skin done!"
+
+
+
+
 # oily_skin = Routine.create!(name: "Routine for oily skin", am_pm: "AM", points_range: 1)
 # RoutineProduct.new(routine: oily_skin, product: rl_dokdo_cream_oily)
 
