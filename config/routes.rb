@@ -7,4 +7,3 @@ Rails.application.routes.draw do
   get "/routines/:id", to: "routines#show"
   post "/user_answers", to: "user_answers#create"
 end
-
