@@ -12,16 +12,6 @@
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
 
-puts "Cleaning DB"
-RoutineProduct.delete_all
-Routine.delete_all
-Product.delete_all
-Answer.delete_all
-Question.delete_all
-Quiz.delete_all
-
-puts "DB is clear!"
-
 
 quiz = Quiz.new
 puts "Quiz created"
@@ -404,26 +394,6 @@ force_spf.save!
 puts 'Finished products!'
 
 # Routine am
-oily = Routine.create!(routine: oily,
-                       #  am_pm: “AM”,
-                       points_range: 0
-                      )
-product_one = RoutineProduct.new(routine: oily,
-                                 product: yttp_cleanser
-                                )
-product_one.save!
-product_two = RoutineProduct.new(routine: oily,
-                                 product: hero_toner_oily
-                                )
-product_two.save!
-product_three = RoutineProduct.new(routine: oily,
-                                   product: rovectin_cream
-                                  )
-product_three.save!
-product_four = RoutineProduct.new(routine: oily,
-                                  product: rl_dokdo_spf
-                                 )
-product_four.save!
 
 # oily cream am
 

@@ -9,15 +9,13 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/quizzes/:id", to: "quizzes#show"
   get "/questions/:id", to: "questions#show", as: "question"
-
+  get "/routines/:id", to: "routines#show"
+  post "/user_answers", to: "user_answers#create"
   # resources :routines do
   #   collection do
   #     get :top
   #   end
   # end
-
-  get "/routines/:id", to: "routines#show"
-  post "/user_answers", to: "user_answers#create"
 end
 
 # resourses
