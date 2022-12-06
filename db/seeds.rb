@@ -13,7 +13,7 @@ Product.delete_all
 UserAnswer.delete_all
 Answer.delete_all
 Question.delete_all
-Quiz.delete_all
+Quiz.delete_all'
 
 puts "DB is clear!"
 

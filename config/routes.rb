@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   #     get :top
   #   end
   # end
+  get "/routines/:id", to: "routines#show"
+  resources :products, only: :index
+
 
 end
