@@ -3,9 +3,6 @@
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
 
-
-
-
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
