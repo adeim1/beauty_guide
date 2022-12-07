@@ -2,10 +2,6 @@
 # AnswerClass:  @user_answer: string, @category_linked_to_answer
 # def ChooseRightCategoryForUserBasedOnAnswers() do
 
-# user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
-
-
-
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
@@ -37,7 +33,6 @@ puts "Quiz created"
 # answer_age.question = user_question
 # answer_age.save!
 
-#UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
 question_one = Question.new(description: "What is your skin type?",
                             quiz: quiz
                           )
