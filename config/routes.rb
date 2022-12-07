@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   # end
   get "/routines/:id", to: "routines#show"
   resources :products, only: :index
-
-
+  get "/categories/:id", to: "categories#show", as: "category"
+  resources :categories, only: :index
 end

@@ -13,30 +13,30 @@ Product.delete_all
 UserAnswer.delete_all
 Answer.delete_all
 Question.delete_all
-Quiz.delete_all'
+Quiz.delete_all
 
 puts "DB is clear!"
 
 quiz = Quiz.new
 puts "Quiz created"
 
-# user_question = Question.new(description: "How old are you?",
-#                              has_points: false,
-#                              quiz: quiz
-#                             )
-# user_question.save!
-# puts "User question created"
+user_question = Question.new(description: "How old are you?",
+                             has_points: false,
+                             quiz: quiz
+                            )
+user_question.save!
+puts "User question created"
 
-# answer_age = Answer.new(text: "18-29",
-#                           # has_points: false,
-#                           points: 0,
-#                          )
-# puts "Answer created"
+answer_age = Answer.new(text: "18-29",
+                          # has_points: false,
+                          points: 0,
+                         )
+puts "Answer created"
 
-# answer_age.question = user_question
-# answer_age.save!
+answer_age.question = user_question
+answer_age.save!
 
-# UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
+UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
 question_one = Question.new(description: "What is your skin type?",
                             quiz: quiz
                           )
