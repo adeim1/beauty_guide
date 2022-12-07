@@ -1,3 +1,11 @@
+
+# AnswerClass:  @user_answer: string, @category_linked_to_answer
+# def ChooseRightCategoryForUserBasedOnAnswers() do
+
+# user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
+
+
+
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
