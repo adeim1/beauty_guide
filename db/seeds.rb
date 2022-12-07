@@ -3,9 +3,6 @@
 
 # user_1 = User.create!(first_name: "Jess", last_name: "Silva", email: "test@tester.com", password: "123456")
 
-
-
-
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
@@ -13,7 +10,7 @@ Product.delete_all
 UserAnswer.delete_all
 Answer.delete_all
 Question.delete_all
-Quiz.delete_all'
+Quiz.delete_all
 
 puts "DB is clear!"
 
@@ -298,9 +295,9 @@ rl_dokdo_cream.save!
 
 # Dry
 
-rl_soybean_cream_dry = Product.new(name: "ROUND LAB Soybean Nourishing Cream", price: 25)
-rl_soybean_cream_dry.category = cream
-rl_soybean_cream_dry.save!
+rl_soybean_cream = Product.new(name: "ROUND LAB Soybean Nourishing Cream", price: 25)
+rl_soybean_cream.category = cream
+rl_soybean_cream.save!
 
 rl_mugwort_cream = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 26)
 rl_mugwort_cream.category = cream
