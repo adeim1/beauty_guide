@@ -7,14 +7,6 @@ Rails.application.routes.draw do
   get "/routines/:id", to: "routines#show"
   post "/user_answers", to: "user_answers#create"
   get "/user_routines/:id", to: "user_routines#show", as: "user_routine"
-
-
-
-  # resources :routines do
-  #   collection do
-  #     get :top
-  #   end
-  # end
   get "/routines/:id", to: "routines#show"
   resources :products, only: :index
   get "/categories/:id", to: "categories#show", as: "category"
