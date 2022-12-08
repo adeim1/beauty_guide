@@ -1,1 +1,23 @@
 // Specific CSS for your home-page
+.home {
+  height: 100vh;
+}
+
+.banner {
+  display: flex;
+  padding-left: 85px;
+  padding-top: 220px;
+  padding-right: 800px;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 79px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-style: normal;
+}
+
+#btn-quiz {
+  background-color: yellow;
+  color: red;
+}
