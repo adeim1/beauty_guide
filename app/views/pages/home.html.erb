@@ -2,8 +2,23 @@
 <div class= "home" style="background-image: url('<%= asset_path "foto_home.png" %>')">
   <div class="container">
     <div class= "banner"><h1>Find your personalized basic skin routine in two minutes</h1> </div>
-  <%# <button id="btn-quiz" type="button" class="btn btn-primary btn-lg">Take the quiz</button> %>
+  </div>
+  <%= link_to "Take the quiz", question_path(@question), id: "quiz-btn", class: "btn btn-primary" %>
+</div>
+
+<div class="footer">
+    <footer id="logo" class="ui-footer ui-bottom-button">
+      <a href="#" class="ui-btn">SAYS</a>
+   </footer>
+   <footer class="ui-footer ui-bottom-button">
+      <a href="#" class="ui-btn">OUR STORY</a>
+   </footer>
+    <footer class="ui-footer ui-bottom-button">
+      <a href="#" class="ui-btn">CONTACT US</a>
+   </footer>
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
   </div>
 </div>
-<%= link_to "Question", question_path(@question), class: "btn btn-primary" %>
-
