@@ -1,3 +1,7 @@
+
+# AnswerClass:  @user_answer: string, @category_linked_to_answer
+# def ChooseRightCategoryForUserBasedOnAnswers() do
+
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
@@ -13,23 +17,6 @@ puts "DB is clear!"
 quiz = Quiz.new
 puts "Quiz created"
 
-# user_question = Question.new(description: "How old are you?",
-#                              has_points: false,
-#                              quiz: quiz
-#                             )
-# user_question.save!
-# puts "User question created"
-
-# answer_age = Answer.new(text: "18-29",
-#                           # has_points: false,
-#                           points: 0,
-#                          )
-# puts "Answer created"
-
-# answer_age.question = user_question
-# answer_age.save!
-
-#UserAnswer.create!(user: user_1, answer: answer_1) #What should happen only when the user selects this answer.
 question_one = Question.new(description: "What is your skin type?",
                             quiz: quiz
                           )
@@ -336,7 +323,7 @@ rl_dokdo_spf = Product.new(name: "ROUND LAB Dokdo 1025 Sunscreen SPF50+ PA++++",
 rl_dokdo_spf.category = spf
 rl_dokdo_spf.save!
 
-scinic_spf = Product.new(name: "SCINIC - Enjoy Super Mild Sun Essence SPF50+ PA++++ - 50ml", price: 9)
+scinic_spf = Product.new(name: "SCINIC - Enjoy Super Mild Sun Essence SPF50+ PA++++", price: 9)
 scinic_spf.category = spf
 scinic_spf.save!
 
