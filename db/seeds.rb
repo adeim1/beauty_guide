@@ -1,3 +1,7 @@
+
+# AnswerClass:  @user_answer: string, @category_linked_to_answer
+# def ChooseRightCategoryForUserBasedOnAnswers() do
+
 puts "Cleaning DB"
 RoutineProduct.delete_all
 Routine.delete_all
@@ -6,6 +10,7 @@ UserAnswer.delete_all
 Answer.delete_all
 Question.delete_all
 Quiz.delete_all
+Category.delete_all
 
 puts "DB is clear!"
 

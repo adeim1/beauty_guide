@@ -9,5 +9,9 @@ Rails.application.routes.draw do
   get "/user_routine", to: "user_routine#show"
   get "/routines/:id", to: "routines#show"
   resources :products, only: :index
-
+  get "/user_routines/:id", to: "user_routines#show", as: "user_routine"
+  get "/routines/:id", to: "routines#show"
+  resources :products, only: :index
+  get "/categories/:id", to: "categories#show", as: "category"
+  resources :categories, only: :index
 end
