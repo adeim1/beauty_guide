@@ -8,17 +8,55 @@
   padding-left: 85px;
   padding-top: 220px;
   padding-right: 800px;
-  letter-spacing: 0.1em;
   font-weight: 400;
   font-size: 36px;
-  line-height: 79px;
+  line-height: 100px;
   text-align: center;
   letter-spacing: 0.1em;
   font-style: normal;
 }
 
-#btn-quiz {
-  background-color: yellow;
-  color: red;
+#quiz-btn {
+  background-color: white;
+  color: rgb(61, 58, 58);
+  font-size: 25px;
+  height: 70px;
+  width: 200px;
+  justify-content: center;
+  border-radius: 25px;
+  border-color: black;
+  margin-left: 220px;
+  margin-top: 50px;
+}
+
+.footer {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width:100%;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  position:fixed;
+  bottom:0;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.ui-footer {
+ text-decoration: none;
 }
 
