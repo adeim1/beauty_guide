@@ -69,6 +69,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_142655) do
     t.string "am_pm"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_routines_on_user_id"
   end
 
   create_table "user_answers", force: :cascade do |t|
@@ -108,6 +110,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_142655) do
   add_foreign_key "questions", "quizzes"
   add_foreign_key "routine_products", "products"
   add_foreign_key "routine_products", "routines"
+  add_foreign_key "routines", "users"
   add_foreign_key "user_answers", "answers"
   add_foreign_key "user_answers", "users"
   add_foreign_key "user_routines", "routines"
