@@ -1,9 +1,18 @@
-<div class="container">
-<%= @question.description %>
-<%= simple_form_for @user_answer do |f| %>
-<%= hidden_field_tag :question, @question.id %>
-<%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
-<%= f.submit "next" %>
-<% end %>
-</div>
+<div class= "quiz" style="background-image: url('<%= asset_path "https://images.squarespace-cdn.com/content/v1/5a812949c027d87aa221e53a/1582295535593-KA7D9UTJ1JOX8BNCAIMR/image-asset.jpeg?format=2500w" %>')">
+  <div class="container">
+    <div class="qcontainer">
+      <%= @question.description %>
+     </div>
+      <div class="answer-cards">
+        <%= simple_form_for @user_answer do |f| %>
+        <%= hidden_field_tag :question, @question.id %>
+        <%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
 
+      <div class="next-button">
+        <%= f.submit "next" %>
+      <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

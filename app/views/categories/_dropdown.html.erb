@@ -1,5 +1,8 @@
 <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button type="button" class="quiz-button">
+    <%= link_to "Quiz", question_path(@question) %>
+  </button>
+  <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="button-dropdown">
     Products
   </button>
   <ul class="dropdown-menu">
