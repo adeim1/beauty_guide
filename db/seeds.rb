@@ -4,6 +4,7 @@
 
 puts "Cleaning DB"
 RoutineProduct.delete_all
+UserRoutine.delete_all
 Routine.delete_all
 Product.delete_all
 UserAnswer.delete_all
