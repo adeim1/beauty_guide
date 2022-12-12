@@ -9,7 +9,7 @@
   padding-top: 220px;
   padding-right: 800px;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 33px;
   line-height: 100px;
   text-align: center;
   letter-spacing: 0.1em;
@@ -27,6 +27,7 @@
   border-color: black;
   margin-left: 220px;
   margin-top: 50px;
+  align-content: center;
 }
 
 .footer {
@@ -38,7 +39,6 @@
   width:100%;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  position:fixed;
   bottom:0;
 }
 .footer-links {
@@ -60,3 +60,12 @@
  text-decoration: none;
 }
 
+.footer-brand {
+  color: black;
+  text-decoration: none;
+}
+
+.ui-btn {
+  color: black;
+  text-decoration: none;
+}
