@@ -1,43 +1,47 @@
 class UserAnswersController < ApplicationController
-  # I am joining the array to optimize for performance, aka compare strings rather than loop whilst comparing arrays. I'm joining instead of directly storing a string as a value for a reason, go with this please. Dareos
+  # I am joining the array to optimize for performance, aka compare strings rather than loop whilst comparing arrays
+  # I'm joining instead of directly storing a string as a value for a reason, go with this please. Dareos
 
   ROUTINES = {
-    "Routine for oily skin" => ["Oily", "None", "No"].join,
-    "Routine for oily sensitive skin" => ["Oily", "None", "Yes, it can be"].join,
-    "Routine for combi skin" => ["Combi", "None", "No"].join,
-    "Routine for combi sensitive skin" => ["Combi", "None", "Yes, it can be"].join,
-    "Routine for dry skin" => ["Dry", "None", "No"].join,
-    "Routine for dry sensitive skin" => ["Dry", "None", "Yes, it can be"].join,
+    # None
+    "Routine for oily any skin" => ["Oily", "Any", "No"].join,
+    "Routine for oily any sensitive skin" => ["Oily", "Any", "Yes, it can be"].join,
+    "Routine for combi any skin" => ["Combination", "Any", "No"].join,
+    "Routine for combi any sensitive skin" => ["Combination", "Any", "Yes, it can be"].join,
+    "Routine for dry any skin" => ["Dry", "Any", "No"].join,
+    "Routine for dry any sensitive skin" => ["Dry", "Any", "Yes, it can be"].join,
     # oilliness
     "Routine for oily skin" => ["Oily", "Oilliness", "No"].join,
     "Routine for oily sensitive skin" => ["Oily", "Oilliness", "Yes, it can be"].join,
-    "Routine for combi skin" => ["Combi", "Oilliness", "No"].join,
-    "Routine for combi sensitive skin" => ["Combi", "Oilliness", "Yes, it can be"].join,
+    "Routine for combi skin" => ["Combination", "Oilliness", "No"].join,
+    "Routine for combi sensitive skin" => ["Combination", "Oilliness", "Yes, it can be"].join,
     "Routine for dry skin" => ["Dry", "Oilliness", "No"].join,
     "Routine for dry sensitive skin" => ["Dry", "Oilliness", "Yes, it can be"].join,
     # Acne
     "Routine for oily acne skin" => ["Oily",  "Acne and clogged pores", "No"].join,
     "Routine for oily acne sensitive skin" => ["Oily",  "Acne and clogged pores", "Yes, it can be"].join,
-    "Routine for combi acne skin" => ["Combi",  "Acne and clogged pores", "No"].join,
+    "Routine for combi acne skin" => ["Combination",  "Acne and clogged pores", "No"].join,
     "Routine for combi acne sensitive skin" => ["Oily", "Acne and clogged pores", "Yes, it can be"].join,
     "Routine for dry acne skin" => ["Dry",  "Acne and clogged pores", "No"].join,
     # pigmentation
     "Routine for dry acne sensitve skin" => ["Dry",  "Acne and clogged pores", "Yes, it can be"].join,
     "Routine for oily pigmentation skin" => ["Oily", "Uneven skin tone, pigmentation", "No"].join,
     "Routine for oily pigmentation sensitive skin" => ["Oily", "Uneven skin tone, pigmentation", "Yes, it can be"].join,
-    "Routine for combi pigmentation skin" => ["Combi", "Uneven skin tone, pigmentation", "No"].join,
-    "Routine for combi pigmentation sensitive skin" => ["Combi", "Uneven skin tone, pigmentation", "Yes, it can be"].join,
+    "Routine for combi pigmentation skin" => ["Combination", "Uneven skin tone, pigmentation", "No"].join,
+    "Routine for combi pigmentation sensitive skin" => ["Combination", "Uneven skin tone, pigmentation", "Yes, it can be"].join,
     "Routine for dry pigmentation skin" => ["Dry", "Uneven skin tone, pigmentation", "No"].join,
     "Routine for dry pigmentation sensitive skin" => ["Dry", "Uneven skin tone, pigmentation", "Yes, it can be"].join,
     # Aging
     "Routine for oily aging skin" => ["Oily", "Signs of aging", "No"].join,
     "Routine for oily aging sensitive skin" => ["Oily", "Signs of aging", "Yes, it can be"].join,
-    "Routine for combi aging skin" => ["Combi", "Signs of aging", "No"].join,
-    "Routine for combi aging sensitive skin" => ["Combi", "Signs of aging", "Yes, it can be"].join,
+    "Routine for combi aging skin" => ["Combination", "Signs of aging", "No"].join,
+    "Routine for combi aging sensitive skin" => ["Combination", "Signs of aging", "Yes, it can be"].join,
     "Routine for dry aging skin" => ["Dry", "Signs of aging", "No"].join,
     "Routine for dry aging sensitive skin" => ["Dry", "Signs of aging", "Yes, it can be"].join
   }
 
+
+  # none
   def create
     @question = Question.find(params[:question])
     @user_answer = UserAnswer.new
@@ -49,27 +53,28 @@ class UserAnswersController < ApplicationController
         redirect_to question_path(@question.id + 1)
       else
         @user_routine = create_user_routine
-        if @user_routine.save
+        if @user_routine.save!
           redirect_to user_routine_path(@user_routine)
-          else
+        else
           redirect_to question_path(Question.first)
         end
       end
     end
   end
- # it cannot be saved to an routine, failiure in the making of the quiz
+  # it cannot be saved to an routine, failiure in the making of the quiz
+
   private
 
   def create_user_routine
     #  1. store the relevant answers into an array of strings
-    answers = [ current_user.user_answers[-6].answer.text, current_user.user_answers[-5].answer.text, current_user.user_answers[-4].answer.text].join
-
+    answers = [current_user.user_answers[-6].answer.text, current_user.user_answers[-5].answer.text, current_user.user_answers[-4].answer.text].join
+    # @value = []
     routine = ROUTINES.select do |key, value|
+      # @value << value
       value == answers
     end
-
-    # create the correct UserRoutine. NOTE FOR THE NEXT TA: I'm not sure why this UserRoutine is .new and not .create, but its also 17:57
     UserRoutine.new(user: current_user, routine: Routine.find_by(name: routine.keys.first))
+    # create the correct UserRoutine. NOTE FOR THE NEXT TA: I'm not sure why this UserRoutine is .new and not .create, but it also 17:57
     # Routine.find_by(name: routine[0]) = is undefines method need , Routine.find_by and something that can
   end
 end
