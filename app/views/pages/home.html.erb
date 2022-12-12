@@ -1,6 +1,32 @@
-<div class= "home" style="background-image: url('<%= asset_path "foto_home.png" %>')">
-  <div class="container">
-    <div class= "banner"><h1>Find your personalized basic skin routine in two minutes</h1> </div>
+<section>
+  <div class= "home">
+    <div class="spacer-cheat">
+    </div>
+
+    <div class="col-md-6 col-xl-5" style="margin-left: 10px">
+        <div class="lc-block mb-3">
+          <div editable="rich">
+            <h1 class="display-2">Find your personalized<br>basic skin routine<br>in 2 minutes</h1>
+          </div>
+        </div>
+        <div class="lc-block">
+          <%= link_to "Take the quiz", question_path(@question), id: "quiz-btn", class: "btn-quiz" %>
+        </div>
+      </div>
   </div>
-  <%= link_to "Take the quiz", question_path(@question), id: "quiz-btn", class: "btn btn-primary" %>
-</div>
+</section>
+
+<%# <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis molestie dui nec elementum. Morbi luctus semper elementum. Nulla viverra pharetra feugiat. Mauris posuere vestibulum feugiat. Phasellus venenatis elit eget felis tempus gravida. Nam ut dui quam. Nullam nibh est, scelerisque et felis et, feugiat luctus mauris. Mauris diam nisl, accumsan eu laoreet eget, efficitur et eros. Donec et magna ac est sodales vehicula id id nisl. Curabitur pharetra arcu non justo blandit, ac consequat elit volutpat.
+
+Aliquam vel tristique diam. Duis ut interdum ligula. Sed malesuada nec enim eget pellentesque. Integer euismod, enim vel congue mollis, sem felis pretium arcu, sed fringilla enim lacus eu nunc. Nullam malesuada at dui quis vestibulum. Mauris rhoncus tellus tortor. Etiam nisi est, aliquet ac libero et, facilisis varius dui. Aliquam ut interdum enim, in fermentum orci. Vivamus id mi lacinia, tincidunt ex ut, rutrum mi. Suspendisse at nunc nec ante viverra venenatis. Cras ut aliquam eros, rhoncus fermentum justo. Sed quis sapien fringilla nisl rhoncus ullamcorper.
+
+Ut ultrices, nisi ut vulputate viverra, massa tortor condimentum eros, ut dapibus turpis felis ut sem. Donec id metus quis nisi euismod varius. Integer accumsan, arcu in fringilla feugiat, diam velit aliquam tortor, ut commodo nunc eros sed ex. Curabitur in mauris tincidunt, dapibus sem ut, aliquet ante. Praesent mollis auctor felis, vel rutrum nunc luctus at. In at blandit odio. Cras varius, dui in pulvinar feugiat, ex lacus aliquam sem, non ultrices ipsum ex eget ex. Nullam semper mi eu eros gravida sagittis. Quisque mauris sem, varius a dui vel, venenatis dignissim dolor. Aenean consectetur eros enim, et varius magna fringilla ut. Aenean quis tempus neque. Praesent vitae urna magna. Quisque tempus justo non neque pulvinar convallis. Curabitur suscipit lacinia pharetra. Mauris viverra tellus nec elit pulvinar, ac ultricies metus dictum. Ut eu molestie dui.
+
+Curabitur lobortis libero iaculis eleifend tincidunt. Vestibulum elementum nunc ac lacus ultricies ullamcorper. Sed nec quam quam. Morbi molestie ullamcorper velit nec ultricies. Aliquam et fermentum purus. Fusce vehicula sollicitudin luctus. Praesent neque mi, euismod sed nisl vel, convallis volutpat diam. Integer sodales, risus ac condimentum condimentum, leo ex blandit quam, et tempus nibh nisi eget tortor. Nulla eu dui aliquet mauris fermentum interdum vitae vitae ante. Nullam vel felis vitae magna gravida aliquam. Sed tellus arcu, scelerisque id felis a, vulputate viverra felis. Vivamus et pharetra libero. Mauris at blandit ex. Morbi a neque eros. Fusce dignissim vulputate augue, ut viverra libero. Aliquam sagittis nisi ut dui vehicula, a tristique nibh vehicula.
+
+Nullam dictum convallis eros in iaculis. Vestibulum in faucibus felis, in maximus arcu. Duis ac auctor nulla, ac consequat ipsum. Integer sed magna mauris. Integer a sollicitudin mi. Nulla facilisi. Nullam molestie leo leo, non ultricies sem hendrerit ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in nisi vel est tincidunt bibendum euismod eu lacus. Pellentesque et iaculis velit, sit amet hendrerit ante. Curabitur in quam ipsum. Phasellus lacus nisi, ultrices eu ex vel, ultricies pretium nulla.
+
+Generated 5 paragraphs, 497 words, 3287 bytes of Lorem Ipsum
+help@lipsum.com
+Privacy Policy
+</p> %>
