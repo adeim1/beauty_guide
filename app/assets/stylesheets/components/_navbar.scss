@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  // background: rgba(255, 255, 255, 0);
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,12 +20,43 @@
 .button-dropdown {
   border: none;
   background-color: transparent;
+  padding-left: 40px;
 }
 
 #quiz-button {
   border: none;
   background-color: transparent;
   color: #161a20;
-  background-color: white;
   text-decoration: none;
 }
+
+.navbar-light .navbar-brand {
+  font-weight: lighter;
+}
+// .navbar-scroll .nav-link,
+// .navbar-scroll .navbar-toggler-icon,
+// .navbar-scroll .navbar-brand {
+//   color: #fff;
+// }
+
+// /* Color of the links AFTER scroll */
+// .navbar-scrolled .nav-link,
+// .navbar-scrolled .navbar-toggler-icon,
+// .navbar-scrolled .navbar-brand {
+//   color: #fff;
+// }
+
+// /* Color of the navbar AFTER scroll */
+// .navbar-scroll,
+// .navbar-scrolled {
+//   background-color: #ffffff;
+// }
+
+.nav-link .navbar-light .navbar-nav .nav-link {
+  color: black!important;
+  opacity: 1!important;
+}
+// .navbar-brand {
+//   font-size: 1.75rem;
+//   letter-spacing: 3px;
+// }
