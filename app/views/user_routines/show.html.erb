@@ -5,13 +5,7 @@
     </div>
       <%#= @user_routine.routine_product %>
       <div class="flex-container">
-        <div class="steps">
-          <ul> Step 1. </ul>
-          <ul> Step 2. </ul>
-          <ul> Step 3. </ul>
-          <ul> Step 4. </ul>
-        </div>
-          <%  @user_routine.routine.routine_products.each do |f| %>
+          <% @user_routine.routine.routine_products.each do |f| %>
             <div class="card">
             <p><%= f.product.name %></p>
               <div class="price">
