@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     @question = Question.first
   end
+
+  def basics
+  end
 end
