@@ -32,6 +32,11 @@
 
 .navbar-light .navbar-brand {
   font-weight: lighter;
+
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: 244px !important;
 }
 // .navbar-scroll .nav-link,
 // .navbar-scroll .navbar-toggler-icon,
