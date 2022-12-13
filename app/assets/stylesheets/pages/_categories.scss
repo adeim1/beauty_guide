@@ -2,10 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 8px;
   margin-top: 20px;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 100px 50px 100px
 }
 
 .category-product-card {
@@ -19,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 250px;
+  height: 320px;
   border: 1px solid darkgray;
 }
 
