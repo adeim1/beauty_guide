@@ -7,6 +7,11 @@
       <div class="flex-container">
           <% @user_routine.routine.routine_products.each do |f| %>
             <div class="card">
+              <div class="product-picture">
+              <% if f.product.photo.attached? %>
+                <%= cl_image_tag f.product.photo.key, height: 100, width: 100, crop: :fill %>
+              <% end %>
+              </div>
             <p><%= f.product.name %></p>
               <div class="price">
                 <%= f.product.price %>
