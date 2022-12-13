@@ -9,6 +9,7 @@
         <%= hidden_field_tag :question, @question.id %>
         <div class="answer-buttons">
           <%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
+           <script src="index.js"></script>
         </div>
         <div class="next-button">
           <%= f.submit "Next" %>
