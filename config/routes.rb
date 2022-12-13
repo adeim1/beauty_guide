@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "/user_routines/:id", to: "user_routines#show", as: "user_routine"
   get "/categories/:id", to: "categories#show", as: "category"
   resources :categories, only: :index
+  get "/basics", to: "pages#basics"
 end
