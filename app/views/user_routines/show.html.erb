@@ -1,12 +1,16 @@
 <div class= "routine" style="background-image: url('<%= asset_path "https://images.squarespace-cdn.com/content/v1/5a812949c027d87aa221e53a/1582295535593-KA7D9UTJ1JOX8BNCAIMR/image-asset.jpeg?format=2500w" %>')">
   <div class="container">
-
     <div class="result">
       <%= @user_routine.routine.name %>
     </div>
+      <%#= @user_routine.routine_product %>
+      <div class="flex-container">
+        <div class="card"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+      </div>
   </div>
 </div>
 
 <%#= @user_routine.routine.routine_product %>
     <%#= link_to question_path(@question), class: 'btn btn-primary' %>
-

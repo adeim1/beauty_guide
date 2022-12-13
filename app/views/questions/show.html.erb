@@ -1,15 +1,18 @@
 <div class= "quiz" style="background-image: url('<%= asset_path "https://images.squarespace-cdn.com/content/v1/5a812949c027d87aa221e53a/1582295535593-KA7D9UTJ1JOX8BNCAIMR/image-asset.jpeg?format=2500w" %>')">
   <div class="container">
     <div class="qcontainer">
-      <%= @question.description %>
-     </div>
-      <div class="answer-cards">
-        <%= simple_form_for @user_answer do |f| %>
-        <%= hidden_field_tag :question, @question.id %>
-        <%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
+      <div class="title-card">  <%= @question.description %></div>
+    </div>
+       <div class="answer-cards">
+          <%= simple_form_for @user_answer do |f| %>
+          <%= hidden_field_tag :question, @question.id %>
+          <div class="answer-buttons">
+          <%= f.collection_radio_buttons :answer, @question.answers, :id, :text %>
+          </div>
+        <div class="next-button">
+          <%= f.submit "Next" %>
+        </div>
 
-      <div class="next-button">
-        <%= f.submit "next" %>
       <% end %>
       </div>
     </div>
