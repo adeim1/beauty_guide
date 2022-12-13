@@ -56,4 +56,17 @@
   background-color: white;
   border-radius: 7px;
   margin: 10px;
+  a {
+    display: flex;
+    justify-content: center;
+    color:#14152C;
+    padding: 5px 10px;
+    background-color: white;
+    box-shadow: inset 0px 0px 10px rgba(175, 35, 131, 0.2);
+    border-radius: 7px;
+    text-decoration: solid;
+    position: absolute;
+    bottom: 10px;
+    left: 48px;
+  }
 }
