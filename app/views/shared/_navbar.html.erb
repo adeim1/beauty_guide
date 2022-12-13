@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light navbar-lewagon fixed-top mask-custom shadow-0"
-  data-controller="navbar"
+<nav class="navbar navbar-expand-lg navbar-light navbar-lewagon fixed-top mask-custom shadow-0 <%= 'navbar-lewagon-white' unless current_page?(root_path) %>"
+  data-controller="<%= 'navbar' if current_page?(root_path) %>"
   data-action="scroll@window->navbar#updateNavbar"
   >
 

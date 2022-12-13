@@ -72,22 +72,21 @@
 
 
 .home {
-  margin-left: 150px;
-  margin-top: 140px;
+  // margin-left: 150px;
+  // margin-top: 140px;
   width: 100%;
   height: 90vh;
   background-image: url('foto_home.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
-.spacer-cheat {
-  height: 100px;
-  width: 100%;
-}
+// .info {
+//   margin-top: 50px;
+// }
 
 h1 {
-  font-size: 40px!important;
+  font-size: 37px!important;
   font-weight: 300;
 }
 
@@ -101,7 +100,7 @@ h1 {
   line-height: 45px;
   border-radius: 7px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   background: #fff;
   color: #000000;
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.097);
