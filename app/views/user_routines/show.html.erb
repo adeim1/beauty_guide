@@ -9,10 +9,12 @@
             <div class="card">
               <div class="product-picture">
               <% if f.product.photo.attached? %>
-                <%= cl_image_tag f.product.photo.key, height: 100, width: 100, crop: :fill %>
+                <%= cl_image_tag f.product.photo.key, height: 130, width: 130, crop: :fill %>
               <% end %>
               </div>
-            <p><%= f.product.name %></p>
+              <div class="name">
+                <p><%= f.product.name %></p>
+              </div>
               <%#= f.product.price %>
             <%= link_to "Buy from #{ f.product.price}$", f.product.products_url %>
           </div>
