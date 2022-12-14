@@ -401,7 +401,7 @@ scinic_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1
 scinic_spf.photo.attach(io: scinic_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 scinic_spf.save!
 
-force_spf = Product.new(name: "Force Shield Superlight Sunscreen Broad Spectrum spf 30", price: 19.99, products_url: "https://www.amazon.com/Force-Shield-Superlight-Sunscreen-Cosmetics/dp/B09R4HGZYW/ref=sr_1_5?keywords=Force+Shield+Superlight+Sunscreen+Broad+Spectrum+SPF+30&qid=1670922231&sr=8-5")
+force_spf = Product.new(name: "Force Shield Superlight spf 30", price: 19.99, products_url: "https://www.amazon.com/Force-Shield-Superlight-Sunscreen-Cosmetics/dp/B09R4HGZYW/ref=sr_1_5?keywords=Force+Shield+Superlight+Sunscreen+Broad+Spectrum+SPF+30&qid=1670922231&sr=8-5")
 force_spf.category = spf
 force_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670858598/9_bxwobc.jpg")
 force_spf.photo.attach(io: force_spf_file, filename: "nes.jpg", content_type: "image/jpg")

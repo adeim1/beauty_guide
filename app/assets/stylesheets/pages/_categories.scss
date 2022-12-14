@@ -19,7 +19,7 @@
   align-items: center;
   text-align: center;
   height: 339px;
-  border: 1px solid darkgray;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .product-picture {
@@ -55,7 +55,7 @@
   a {
     display: flex;
     justify-content: center;
-    padding: 9px 5px;
+    padding: 8px 12px;
     color:#14152C;
     background-color: #B2D7C9;
     border-color: #000000;
@@ -64,6 +64,9 @@
     text-decoration: solid;
     bottom: 10px;
     left: 48px;
+    border: 1px solid black;
+    font-family: $cards-a;
+    font-size: 16px;
   }
 }
 
@@ -73,4 +76,5 @@
   /* margin-bottom: 1rem; */
   margin-left: 4px;
   margin-right: 4px;
+  height: 80px;
 }
