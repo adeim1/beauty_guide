@@ -10,7 +10,7 @@
 .category-product-card {
   width: 264px;
   background: white;
-  margin-top: 100px;
+  margin-top: 50px;
   justify-content: center;
   border-radius:10px;
   border-color:#000000;
@@ -77,4 +77,11 @@
   margin-left: 4px;
   margin-right: 4px;
   height: 80px;
+}
+
+.category-header {
+  display: flex;
+  padding-top: 100px;
+  padding-left: 145px;
+  font-size: 25px;
 }
