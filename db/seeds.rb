@@ -129,7 +129,7 @@ answer_two.question = question_four
 answer_two.save!
 puts "Answer created to question 4"
 
-question_five = Question.new(description: "What kind product textures do you prefer?",
+question_five = Question.new(description: "What product textures do you prefer?",
                             #  has_points: false,
                              quiz: quiz
                             )
