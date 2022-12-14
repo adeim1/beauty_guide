@@ -24,6 +24,7 @@
 
 .product-picture {
   justify-content: center;
+  margin-top: 5px;
 }
 
 .home-categories {
@@ -46,10 +47,15 @@
   background-color: white;
   border-radius: 7px;
   margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  justify-content: center;
+
   a {
     display: flex;
     justify-content: center;
-    padding: 9px 3px;
+    padding: 9px 5px;
     color:#14152C;
     background-color: #B2D7C9;
     border-color: #000000;
