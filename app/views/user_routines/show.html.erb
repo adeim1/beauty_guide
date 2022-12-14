@@ -1,7 +1,7 @@
 <div class= "routine" style="background-image: url('<%= asset_path "https://images.squarespace-cdn.com/content/v1/5a812949c027d87aa221e53a/1582295535593-KA7D9UTJ1JOX8BNCAIMR/image-asset.jpeg?format=2500w" %>')">
   <div class="qroutine">
     <div class="result">
-      <h4><%= @user_routine.routine.name %></h4>
+      <%= @user_routine.routine.name %>
     </div>
       <%#= @user_routine.routine_product %>
       <div class="flex-container">
@@ -9,7 +9,7 @@
             <div class="card">
               <div class="product-picture">
               <% if f.product.photo.attached? %>
-                <%= cl_image_tag f.product.photo.key, height: 100, width: 100, crop: :fill %>
+                <%= cl_image_tag f.product.photo.key, height: 125, width: 125, crop: :fill %>
               <% end %>
               </div>
             <p><%= f.product.name %></p>
