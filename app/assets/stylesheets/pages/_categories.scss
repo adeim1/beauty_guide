@@ -8,7 +8,7 @@
 }
 
 .category-product-card {
-  width: 250px;
+  width: 264px;
   background: white;
   margin-top: 100px;
   justify-content: center;
@@ -18,12 +18,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 320px;
+  height: 339px;
   border: 1px solid darkgray;
 }
 
 .product-picture {
   justify-content: center;
+  margin-top: 5px;
 }
 
 .home-categories {
@@ -46,10 +47,15 @@
   background-color: white;
   border-radius: 7px;
   margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  justify-content: center;
+
   a {
     display: flex;
     justify-content: center;
-    padding: 9px 3px;
+    padding: 9px 5px;
     color:#14152C;
     background-color: #B2D7C9;
     border-color: #000000;
