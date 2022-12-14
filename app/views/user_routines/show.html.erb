@@ -5,16 +5,21 @@
     </div>
       <%#= @user_routine.routine_product %>
       <div class="flex-container">
-          <% @user_routine.routine.routine_products.each do |f| %>
-            <div class="card">
+          <% @user_routine.routine.routine_products.each_with_index do |f, index| %>
+
+
+            <div class="card no-border">
+            <p> Step <%= index + 1 %>. <%= f.product.category.name.capitalize %></p>
               <div class="product-picture">
               <% if f.product.photo.attached? %>
-                <%= cl_image_tag f.product.photo.key, height: 125, width: 125, crop: :fill %>
+                <%= cl_image_tag f.product.photo.key, height: 130, width: 130, crop: :fill %>
               <% end %>
               </div>
-            <p><%= f.product.name %></p>
+              <div class="name">
+                <p><%= f.product.name %></p>
+              </div>
               <%#= f.product.price %>
-            <%= link_to "Buy from #{ f.product.price} $", f.product.products_url %>
+            <%= link_to "Buy from #{ f.product.price}$", f.product.products_url %>
           </div>
         <% end %>
       </div>

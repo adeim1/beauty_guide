@@ -8,7 +8,7 @@
 }
 
 .category-product-card {
-  width: 250px;
+  width: 264px;
   background: white;
   margin-top: 100px;
   justify-content: center;
@@ -18,12 +18,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 320px;
-  border: 1px solid darkgray;
+  height: 339px;
+  border: 1px solid rgb(0, 0, 0);
 }
 
 .product-picture {
   justify-content: center;
+  margin-top: 5px;
 }
 
 .home-categories {
@@ -46,18 +47,34 @@
   background-color: white;
   border-radius: 7px;
   margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 25px;
+  justify-content: center;
+
   a {
     display: flex;
     justify-content: center;
-    padding: 9px 3px;
+    padding: 8px 12px;
     color:#14152C;
     background-color: #B2D7C9;
     border-color: #000000;
     box-shadow: black;
     border-radius: 7px;
     text-decoration: solid;
-    position: sticky;
     bottom: 10px;
     left: 48px;
+    border: 1px solid black;
+    font-family: $cards-a;
+    font-size: 16px;
   }
+}
+
+.categories-name {
+  margin-top: 10px;
+  font-size: small;
+  /* margin-bottom: 1rem; */
+  margin-left: 4px;
+  margin-right: 4px;
+  height: 80px;
 }

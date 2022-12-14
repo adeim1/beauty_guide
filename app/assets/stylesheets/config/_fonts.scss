@@ -1,6 +1,6 @@
 // Import Google fonts
 @import url(href="https://fonts.googleapis.com/css2?family=Suranna&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,400;1,200;1,400&display=swap');
 // Define fonts for body and headers
 $body-font: 'Suranna', serif;
 $headers-font: 'Suranna', serif;
@@ -15,3 +15,4 @@ $headers-font: 'Suranna', serif;
 // }
 // $my-font: "Font Name";
 body {font-family: 'Suranna', serif !important;}
+$cards-a: 'Source Sans 3', sans-serif;
