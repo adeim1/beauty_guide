@@ -17,8 +17,8 @@
 }
 
 .result {
-  // border-color:#000000;
-  // color:#14152C;
+  border-color:#000000;
+  color:#14152C;
   box-shadow: 0px 0px 1px 4px rgba(88,97,175, 0.2);
   position: relative;
   padding: 25px;
@@ -41,18 +41,18 @@ h4{
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-evenly;
-  // border: #000000;
+  border: #000000;
   background-color: white;
   margin-top: 40px;
   border-radius: 7px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0px 0px 1px 4px rgba(88,97,175, 0.2);
 }
 
 .card {
-  // border-color:#000000;
-  // color:#14152C;
-  // box-shadow: 0px 0px 1px 4px rgba(88,97,175, 0.2);
+  border-color:#000000;
+  color:#14152C;
+  box-shadow: 0px 0px 1px 4px rgba(88,97,175, 0.2);
   position: relative;
   margin-top: 50px;
   width: 150px;
@@ -69,11 +69,10 @@ h4{
   a {
     display: flex;
     justify-content: center;
-    padding: 9px 3px;
     color:#14152C;
+    padding: 5px 10px;
     background-color: #B2D7C9;
-    // border-color: #000000;
-    // box-shadow: black;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
     text-decoration: solid;
     position: sticky;
@@ -90,3 +89,4 @@ h4{
   justify-content: center;
   margin-top: 5px;
 }
+
