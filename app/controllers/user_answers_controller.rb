@@ -23,8 +23,8 @@ class UserAnswersController < ApplicationController
     "Routine for combi acne skin" => ["Combination", "Acne and clogged pores", "No"].join,
     "Routine for combi acne sensitive skin" => ["Combination", "Acne and clogged pores", "Yes, it can be"].join,
     "Routine for dry acne skin" => ["Dry",  "Acne and clogged pores", "No"].join,
-    # pigmentation
     "Routine for dry acne sensitve skin" => ["Dry",  "Acne and clogged pores", "Yes, it can be"].join,
+    # pigmentation
     "Routine for oily pigmentation skin" => ["Oily", "Uneven skin tone, pigmentation", "No"].join,
     "Routine for oily pigmentation sensitive skin" => ["Oily", "Uneven skin tone, pigmentation", "Yes, it can be"].join,
     "Routine for combi pigmentation skin" => ["Combination", "Uneven skin tone, pigmentation", "No"].join,
