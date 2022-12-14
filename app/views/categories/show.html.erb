@@ -1,4 +1,5 @@
 <div class= "home-categories" style="background-image: url('<%= asset_path "foto_home.png" %>');min-height: 90vh ">
+  <p class="category-header"><%= @category.name.capitalize %></p>
   <div class="category-container" style="height: 100%;">
     <%  @category.products.each do |product| %>
       <div class= "category-product-card">
@@ -18,8 +19,3 @@
     <% end %>
   </div>
 </div>
-
-<%# <% @categories.each do |category| %>
-    <%# <%<%= category.name %>
-    <%# <%= category.description %>
-  <%# <% end %>
