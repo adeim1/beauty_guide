@@ -188,7 +188,7 @@ spf = Category.create!(name: "spf", description: "Use sunscreen every day")
 # Cleansers
 # Oily
 puts "creating product Cleanser"
-yttp_cleanser = Product.new(name: "YTTP Kale + Green Tea SUPERFOOD CLEANSER", price: 62.99, products_url: "https://www.amazon.com/Youth-People-Kale-Superfood-Cleanser/dp/B018A0BO92/ref=sr_1_2?crid=1D3L5KN8EZH51&keywords=YTTP+Kale+%2B+Green+Tea+SUPERFOOD+CLEANSER&qid=1670927165&sprefix=yttp+kale+%2B+green+tea+superfood+cleanser%2Caps%2C276&sr=8-2")
+yttp_cleanser = Product.new(name: "Yttp Kale + Green Tea Superfood Cleanser", price: 62.99, products_url: "https://www.amazon.com/Youth-People-Kale-Superfood-Cleanser/dp/B018A0BO92/ref=sr_1_2?crid=1D3L5KN8EZH51&keywords=YTTP+Kale+%2B+Green+Tea+SUPERFOOD+CLEANSER&qid=1670927165&sprefix=yttp+kale+%2B+green+tea+superfood+cleanser%2Caps%2C276&sr=8-2")
 yttp_cleanser.category = cleanser
 yttp_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670864975/13324146-1684896631033101_sb44rn.webp")
 yttp_cleanser.photo.attach(io: yttp_cleanser_file, filename: "nes.webp", content_type: "image/webp")
@@ -200,7 +200,7 @@ inkey_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/uploa
 inkey_cleanser.photo.attach(io: inkey_cleanser_file, filename: "nes.webp", content_type: "image/webp")
 inkey_cleanser.save!
 
-tula_cleanser = Product.new(name: "Tula 3-in-1 Acne Cleanser, Mask & Spot Treatment", price: 38, products_url: "https://www.amazon.com/TULA-All-Star-Cleanser-Treatment-Breakouts/dp/B0B71XVXQ7")
+tula_cleanser = Product.new(name: "Tula 3-in-1 Acne Cleanser", price: 38, products_url: "https://www.amazon.com/TULA-All-Star-Cleanser-Treatment-Breakouts/dp/B0B71XVXQ7")
 tula_cleanser.category = cleanser
 tula_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670865314/UK200035761_TULA_mpolac.jpg")
 tula_cleanser.photo.attach(io: tula_cleanser_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -212,14 +212,13 @@ cerave_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/uplo
 cerave_cleanser.photo.attach(io: cerave_cleanser_file, filename: "nes.jpg", content_type: "image/jpg")
 cerave_cleanser.save!
 
-##########
-rl_dokdo_cleanser = Product.new(name: "ROUND LAB 1025 Dokdo Cleanser", price: 14.50, products_url: "https://www.amazon.com/Round-1025-Dokdo-Cleanser-150ml/dp/B08FMCMGN6/ref=sr_1_2?crid=20IY6UWPX1DTK&keywords=dokdo+cleanser&qid=1670926684&sprefix=dokdo+cleanse%2Caps%2C398&sr=8-2")
+
+rl_dokdo_cleanser = Product.new(name: "Round Lab 1025 Dokdo Cleanser", price: 14.50, products_url: "https://www.amazon.com/Round-1025-Dokdo-Cleanser-150ml/dp/B08FMCMGN6/ref=sr_1_2?crid=20IY6UWPX1DTK&keywords=dokdo+cleanser&qid=1670926684&sprefix=dokdo+cleanse%2Caps%2C398&sr=8-2")
 rl_dokdo_cleanser.category = cleanser
 rl_dokdo_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670874918/round-lab-birch-juice-moisturizing-cleanser-150ml-404_qjekzr.png")
 rl_dokdo_cleanser.photo.attach(io: rl_dokdo_cleanser_file, filename: "nes.png", content_type: "image/png")
 rl_dokdo_cleanser.save!
-# https://m.media-amazon.com/images/I/61sV7EvLXAL._AC_SX679_.jpg
-#################
+
 
 # Combi
 
@@ -235,7 +234,7 @@ hyram_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/uploa
 hyram_cleanser.photo.attach(io: hyram_cleanser_file, filename: "nes.webp", content_type: "image/webp")
 hyram_cleanser.save!
 
-rl_birch_cleanser = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cleanser", price: 14.30, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Cleanser-Soothing/dp/B093W78YWZ?ref_=ast_sto_dp")
+rl_birch_cleanser = Product.new(name: "Round Lab Birch Juice Cleanser", price: 14.30, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Cleanser-Soothing/dp/B093W78YWZ?ref_=ast_sto_dp")
 rl_birch_cleanser.category = cleanser
 rl_birch_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670874918/round-lab-birch-juice-moisturizing-cleanser-150ml-404_qjekzr.png")
 rl_birch_cleanser.photo.attach(io: rl_birch_cleanser_file, filename: "nes.png", content_type: "image/png")
@@ -270,19 +269,19 @@ aveeno_cleanser.save!
 
 # Oily
 puts "creating product Toners"
-rl_dokdo_toner = Product.new(name: "ROUND LAB Dokdo Toner", price: 17, products_url: "https://www.amazon.com/ROUND-LAB-Hydrating-Hatching-Watery/dp/B08FM5BTF6?ref_=ast_sto_dp")
+rl_dokdo_toner = Product.new(name: "Round Lab Dokdo Toner", price: 17, products_url: "https://www.amazon.com/ROUND-LAB-Hydrating-Hatching-Watery/dp/B08FM5BTF6?ref_=ast_sto_dp")
 rl_dokdo_toner.category = toner
 rl_dokdo_toner_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670879201/ger_pm_Round-Lab-Time-Deal-1025-Dokdo-Toner-Glattendes-Gesichtswasser-200-ml-11202_1_vg5vyr.webp")
 rl_dokdo_toner.photo.attach(io: rl_dokdo_toner_file, filename: "nes.webp", content_type: "image/webp")
 rl_dokdo_toner.save!
 
-rl_mugwort_toner = Product.new(name: "ROUND LAB Mugwort Calming Toner", price: 18.70, products_url: "https://www.amazon.com/ROUND-LAB-Mugwort-Madecassoside-Soothing/dp/B092VJGZSL/ref=sr_1_1?crid=28DKO5APP35ZQ&keywords=ROUND+LAB+Mugwort+Calming+Toner&qid=1670925457&sprefix=round+lab+mugwort+calming+toner%2Caps%2C293&sr=8-1")
+rl_mugwort_toner = Product.new(name: "Round Lab Mugwort Calming Toner", price: 18.70, products_url: "https://www.amazon.com/ROUND-LAB-Mugwort-Madecassoside-Soothing/dp/B092VJGZSL/ref=sr_1_1?crid=28DKO5APP35ZQ&keywords=ROUND+LAB+Mugwort+Calming+Toner&qid=1670925457&sprefix=round+lab+mugwort+calming+toner%2Caps%2C293&sr=8-1")
 rl_mugwort_toner.category = toner
 rl_mugwort_toner_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670878949/round-lab-mugwort-calming-toner-300ml-574_gziu0a.jpg")
 rl_mugwort_toner.photo.attach(io: rl_mugwort_toner_file, filename: "nes.jpg", content_type: "image/jpg")
 rl_mugwort_toner.save!
 
-hero_toner = Product.new(name: "Clear Collective Toner from Hero Cosmetics", price: 12.99, products_url: "https://www.amazon.com/Clear-Collective-Balancing-Capsule-Cosmetics/dp/B08ZC9TDK1/ref=sr_1_3?crid=1MOYYUUAZXSDJ&keywords=%22Clear+Collective+Toner+from+Hero+Cosmetics&qid=1670925429&sprefix=round+lab+birch+juice+moisturizing+toner%2Caps%2C309&sr=8-3")
+hero_toner = Product.new(name: "Clear Collective Toner Hero Cosmetics", price: 12.99, products_url: "https://www.amazon.com/Clear-Collective-Balancing-Capsule-Cosmetics/dp/B08ZC9TDK1/ref=sr_1_3?crid=1MOYYUUAZXSDJ&keywords=%22Clear+Collective+Toner+from+Hero+Cosmetics&qid=1670925429&sprefix=round+lab+birch+juice+moisturizing+toner%2Caps%2C309&sr=8-3")
 hero_toner.category = toner
 hero_toner_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670878872/PDP-Vid-Thumb-CC-T-v1611351716289_vmoupj.jpg")
 hero_toner.photo.attach(io: hero_toner_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -290,7 +289,7 @@ hero_toner.save!
 
 # Dry
 
-rl_birch_toner = Product.new(name: "ROUND LAB Birch Juice Moisturizing Toner", price: 19.97, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Hyaluronic-Alcohol-Free/dp/B093WJRD1C/ref=sr_1_2?crid=3TJWAW9BAG9SS&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Toner&qid=1670925399&sprefix=round+lab+birch+juice+moisturizing+toner%2Caps%2C558&sr=8-2")
+rl_birch_toner = Product.new(name: "Round Lab Birch Juice Moisturizing Toner", price: 19.97, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Hyaluronic-Alcohol-Free/dp/B093WJRD1C/ref=sr_1_2?crid=3TJWAW9BAG9SS&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Toner&qid=1670925399&sprefix=round+lab+birch+juice+moisturizing+toner%2Caps%2C558&sr=8-2")
 rl_birch_toner.category = toner
 rl_birch_toner_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670875642/round-lab-birch-juice-moisturizing-toner-300ml-757_chuvwo.jpg")
 rl_birch_toner.photo.attach(io: rl_birch_toner_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -321,7 +320,7 @@ byoma_cream_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v
 byoma_cream.photo.attach(io: byoma_cream_file, filename: "nes.webp", content_type: "image/webp")
 byoma_cream.save!
 
-rl_dokdo_cream = Product.new(name: "ROUND LAB 1025 DOKDO Cream", price: 22.40, products_url: "https://www.amazon.com/ROUND-LAB-DOKDO-Cream-Moisturizer/dp/B07ZNTG39G/ref=sr_1_1?crid=2J11YI158TQT1&keywords=ROUND+LAB+1025+DOKDO+Cream&qid=1670925114&sprefix=round+lab+soybean+nourishing+cream%2Caps%2C423&sr=8-1")
+rl_dokdo_cream = Product.new(name: "Round Lab 1025 Dokdo Cream", price: 22.40, products_url: "https://www.amazon.com/ROUND-LAB-DOKDO-Cream-Moisturizer/dp/B07ZNTG39G/ref=sr_1_1?crid=2J11YI158TQT1&keywords=ROUND+LAB+1025+DOKDO+Cream&qid=1670925114&sprefix=round+lab+soybean+nourishing+cream%2Caps%2C423&sr=8-1")
 rl_dokdo_cream.category = cream
 rl_dokdo_cream_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670878124/image_lj9cb6.jpg")
 rl_dokdo_cream.photo.attach(io: rl_dokdo_cream_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -329,19 +328,19 @@ rl_dokdo_cream.save!
 
 # Dry
 
-rl_soybean_cream = Product.new(name: "ROUND LAB Soybean Nourishing Cream", price: 25, products_url: "https://www.amazon.com/ROUND-LAB-Soybean-Nourishing-Cream/dp/B081VSDVV5/ref=sr_1_1?crid=VEV6JAPDIUFL&keywords=ROUND+LAB+Soybean+Nourishing+Cream&qid=1670925089&sprefix=round+lab+soybean+nourishing+cream%2Caps%2C311&sr=8-1")
+rl_soybean_cream = Product.new(name: "Round Lab Soybean Nourishing Cream", price: 25, products_url: "https://www.amazon.com/ROUND-LAB-Soybean-Nourishing-Cream/dp/B081VSDVV5/ref=sr_1_1?crid=VEV6JAPDIUFL&keywords=ROUND+LAB+Soybean+Nourishing+Cream&qid=1670925089&sprefix=round+lab+soybean+nourishing+cream%2Caps%2C311&sr=8-1")
 rl_soybean_cream.category = cream
 rl_soybean_cream_file = URI.open("https://cdn.webshopapp.com/shops/281224/files/401225475/500x500x2/image.jpg")
 rl_soybean_cream.photo.attach(io: rl_soybean_cream_file, filename: "nes.jpg", content_type: "image/jpg")
 rl_soybean_cream.save!
 
-rl_mugwort_cream = Product.new(name: "ROUND LAB Mugwort Calming Cream", price: 26.81, products_url: "https://www.amazon.com/ROUND-LAB-Soothing-Moisturizing-Madecassoside/dp/B092VPH98L/ref=sr_1_1?crid=EUV7ULRAN5GJ&keywords=ROUND+LAB+Mugwort+Calming+Cream%27&qid=1670925054&sprefix=round+lab+mugwort+calming+cream%2Caps%2C424&sr=8-1")
+rl_mugwort_cream = Product.new(name: "Round Lab Mugwort Calming Cream", price: 26.81, products_url: "https://www.amazon.com/ROUND-LAB-Soothing-Moisturizing-Madecassoside/dp/B092VPH98L/ref=sr_1_1?crid=EUV7ULRAN5GJ&keywords=ROUND+LAB+Mugwort+Calming+Cream%27&qid=1670925054&sprefix=round+lab+mugwort+calming+cream%2Caps%2C424&sr=8-1")
 rl_mugwort_cream.category = cream
 rl_mugwort_cream_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670878007/image_lo5hc5.jpg")
 rl_mugwort_cream.photo.attach(io: rl_mugwort_cream_file, filename: "nes.jpg", content_type: "image/jpg")
 rl_mugwort_cream.save!
 
-rl_birch_cream = Product.new(name: "ROUND LAB Birch Juice Moisturizing Cream", price: 21.89, products_url: "https://www.amazon.com/ROUND-LAB-Birch-Juice-Moisturizing/dp/B081VS3F27/ref=sr_1_1?crid=392CBD6IBW8E2&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Cream&qid=1670924994&sprefix=%2Caps%2C536&sr=8-1")
+rl_birch_cream = Product.new(name: "Round Lab Birch Juice Moisturizing Cream", price: 21.89, products_url: "https://www.amazon.com/ROUND-LAB-Birch-Juice-Moisturizing/dp/B081VS3F27/ref=sr_1_1?crid=392CBD6IBW8E2&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Cream&qid=1670924994&sprefix=%2Caps%2C536&sr=8-1")
 rl_birch_cream.category = cream
 rl_birch_cream_file = URI.open("https://cdn-sv2.stylevana.com/media/catalog/product/cache/8/image/9df78eab33525d08d6e5fb8d27136e95/r/o/round-lab-birch-juice-moisturizing-cream-80ml-403.jpg")
 rl_birch_cream.photo.attach(io: rl_birch_cream_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -360,31 +359,31 @@ cerave_cream_pm.photo.attach(io: cerave_cream_pm_file, filename: "nes.jpg", cont
 cerave_cream_pm.save!
 
 puts "creating spf products"
-isntree_spf = Product.new(name: "Isntree Hyaluronic Acid Watery Sun Gel SPF50+", price: 26.50, products_url: "https://www.amazon.com/Hyaluronic-Replenishes-moisture-hyaluronic-whitecast/dp/B08D3L4BQP/ref=sr_1_2?crid=FAJO3JKSANT7&keywords=Isntree+Hyaluronic+Acid+Watery+Sun+Gel+SPF50%2B&qid=1670924601&sprefix=isntree+hyaluronic+acid+watery+sun+gel+spf50%2B%2Caps%2C394&sr=8-2")
+isntree_spf = Product.new(name: "Isntree Hyaluronic Acid Watery Sun Gel spf 50+", price: 26.50, products_url: "https://www.amazon.com/Hyaluronic-Replenishes-moisture-hyaluronic-whitecast/dp/B08D3L4BQP/ref=sr_1_2?crid=FAJO3JKSANT7&keywords=Isntree+Hyaluronic+Acid+Watery+Sun+Gel+SPF50%2B&qid=1670924601&sprefix=isntree+hyaluronic+acid+watery+sun+gel+spf50%2B%2Caps%2C394&sr=8-2")
 isntree_spf.category = spf
 isntree_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670842370/XXL_p0132741259_y3vhav.jpg")
 isntree_spf.photo.attach(io: isntree_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 isntree_spf.save!
 
-sun_bum_spf = Product.new(name: "Sun Bum Mineral Face Sunscreen Lotion SPF 30", price: 14.28, products_url: "https://www.amazon.com/Sun-Bum-Sunscreen-Protection-Hypoallergenic/dp/B07ZTRQ6W3/ref=sr_1_2?crid=2FSC9ONCLHUVZ&keywords=Sun%2BBum%2BMineral%2BFace%2BSunscreen%2BLotion%2BSPF%2B30%22&qid=1670924373&sprefix=beauty%2Bof%2Bjoseon%2Brelief%2Bsun%2Brice%2Caps%2C299&sr=8-2&th=1")
+sun_bum_spf = Product.new(name: "Sun Bum Mineral Face spf 30", price: 14.28, products_url: "https://www.amazon.com/Sun-Bum-Sunscreen-Protection-Hypoallergenic/dp/B07ZTRQ6W3/ref=sr_1_2?crid=2FSC9ONCLHUVZ&keywords=Sun%2BBum%2BMineral%2BFace%2BSunscreen%2BLotion%2BSPF%2B30%22&qid=1670924373&sprefix=beauty%2Bof%2Bjoseon%2Brelief%2Bsun%2Brice%2Caps%2C299&sr=8-2&th=1")
 sun_bum_spf.category = spf
 sun_bum_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670855478/Mineral_30_Face_Front_db1206a8-556c-4bde-9cba-4d639cd12fab_1400x1400_dcrk42.jpg")
 sun_bum_spf.photo.attach(io: sun_bum_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 sun_bum_spf.save!
 
-beauty_of_joseon_spf = Product.new(name: "Beauty of Joseon Relief Sun: Rice + Probiotic SPF 50", price: 15.50, products_url: "https://www.amazon.com/Beauty-Joseon-Relief-50ml-1-69fl-oz/dp/B09JVNZVH3/ref=sr_1_1?crid=ATT8TOIZW2G7&keywords=Beauty+of+Joseon+Relief+Sun%3A+Rice&qid=1670924319&sprefix=beauty+of+joseon+relief+sun+rice+%2Caps%2C668&sr=8-1")
+beauty_of_joseon_spf = Product.new(name: "Beauty of Joseon Relief Sun: Rice + Probiotic spf 50", price: 15.50, products_url: "https://www.amazon.com/Beauty-Joseon-Relief-50ml-1-69fl-oz/dp/B09JVNZVH3/ref=sr_1_1?crid=ATT8TOIZW2G7&keywords=Beauty+of+Joseon+Relief+Sun%3A+Rice&qid=1670924319&sprefix=beauty+of+joseon+relief+sun+rice+%2Caps%2C668&sr=8-1")
 beauty_of_joseon_spf.category = spf
 beauty_of_joseon_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670842525/211013_Reliefsun_980x_b1da8bc0-504b-40e1-928b-d9fe05da5fd0_zrbjxk.jpg")
 beauty_of_joseon_spf.photo.attach(io: beauty_of_joseon_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 beauty_of_joseon_spf.save!
 
-sun_bum_tinted_spf = Product.new(name: "Sun Bum Mineral SPF 30 Tinted Sunscreen Face Lotion", price: 18.99, products_url: "https://www.amazon.com/Sun-Bum-Sunscreen-Protection-Hypoallergenic/dp/B072QYD2P4/ref=sr_1_5?crid=3MQK8TAIBAKOP&keywords=Sun+Bum+Mineral+SPF+30+Tinted+Sunscreen+Face&qid=1670924257&sprefix=sun+bum+mineral+spf+30+tinted+sunscreen+face%2Caps%2C388&sr=8-5")
+sun_bum_tinted_spf = Product.new(name: "Sun Bum Mineral Tinted spf 30", price: 18.99, products_url: "https://www.amazon.com/Sun-Bum-Sunscreen-Protection-Hypoallergenic/dp/B072QYD2P4/ref=sr_1_5?crid=3MQK8TAIBAKOP&keywords=Sun+Bum+Mineral+SPF+30+Tinted+Sunscreen+Face&qid=1670924257&sprefix=sun+bum+mineral+spf+30+tinted+sunscreen+face%2Caps%2C388&sr=8-5")
 sun_bum_tinted_spf.category = spf
 sun_bum_tinted_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670842584/sun-bum-sun-bum-mineral-spf-30-tinted-sunscreen-face-lotion-17-oz50-ml-face-sunscreens-267177_926x1236_lgxgku.jpg")
 sun_bum_tinted_spf.photo.attach(io: sun_bum_tinted_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 sun_bum_tinted_spf.save!
 
-rl_birch_spf = Product.new(name: "ROUND LAB Birch Juice Moisturizing Sunscreen SPF50+", price: 22.20, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Protection-Friendly-Reef/dp/B09DGPRM22/ref=sr_1_1?crid=YEG0CFD0W1U9&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Sunscreen+SPF50%2B&qid=1670924203&sprefix=round+lab+birch+juice+moisturizing+sunscreen+spf50%2B%2Caps%2C298&sr=8-1")
+rl_birch_spf = Product.new(name: "Round Lab Birch Juice Moisturizing Sunscreen spf 50+", price: 22.20, products_url: "https://www.amazon.com/ROUND-LAB-Moisturizing-Protection-Friendly-Reef/dp/B09DGPRM22/ref=sr_1_1?crid=YEG0CFD0W1U9&keywords=ROUND+LAB+Birch+Juice+Moisturizing+Sunscreen+SPF50%2B&qid=1670924203&sprefix=round+lab+birch+juice+moisturizing+sunscreen+spf50%2B%2Caps%2C298&sr=8-1")
 rl_birch_spf.category = spf
 rl_birch_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670843258/round-lab-birch-juice-moisturizing-sun-cream-50ml-109_cwaw54.jpg")
 rl_birch_spf.photo.attach(io: rl_birch_spf_file, filename: "nes.jpg", content_type: "image/jpg")
@@ -396,13 +395,13 @@ rl_birch_spf.save!
 # rl_dokdo_spf.photo.attach(io: rl_dokdo_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 # rl_dokdo_spf.save!
 
-scinic_spf = Product.new(name: "SCINIC - Enjoy Super Mild Sun Essence SPF50+", price: 8.73, products_url: "https://www.amazon.com/SCINIC-Essence-Lightweight-Hydrating-Skincare/dp/B097Y83FHS/ref=sr_1_1?crid=3JA9Y6X5BNUF0&keywords=SCINIC+-+Enjoy+Super+Mild+Sun+Essence+SPF50%2B+PA%2B%2B%2B%2B&qid=1670923820&sprefix=scinic+-+enjoy+super+mild+sun+essence+spf50%2B+pa%2B%2B%2B%2B%2Caps%2C302&sr=8-1")
+scinic_spf = Product.new(name: "Scinic- Enjoy Super Mild Sun Essence spf 50+", price: 8.73, products_url: "https://www.amazon.com/SCINIC-Essence-Lightweight-Hydrating-Skincare/dp/B097Y83FHS/ref=sr_1_1?crid=3JA9Y6X5BNUF0&keywords=SCINIC+-+Enjoy+Super+Mild+Sun+Essence+SPF50%2B+PA%2B%2B%2B%2B&qid=1670923820&sprefix=scinic+-+enjoy+super+mild+sun+essence+spf50%2B+pa%2B%2B%2B%2B%2Caps%2C302&sr=8-1")
 scinic_spf.category = spf
 scinic_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670858523/scinic-enjoy-mild-sun-essence-50ml-180_smzwes.png")
 scinic_spf.photo.attach(io: scinic_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 scinic_spf.save!
 
-force_spf = Product.new(name: "Force Shield Superlight Sunscreen Broad Spectrum SPF 30", price: 19.99, products_url: "https://www.amazon.com/Force-Shield-Superlight-Sunscreen-Cosmetics/dp/B09R4HGZYW/ref=sr_1_5?keywords=Force+Shield+Superlight+Sunscreen+Broad+Spectrum+SPF+30&qid=1670922231&sr=8-5")
+force_spf = Product.new(name: "Force Shield Superlight Sunscreen Broad Spectrum spf 30", price: 19.99, products_url: "https://www.amazon.com/Force-Shield-Superlight-Sunscreen-Cosmetics/dp/B09R4HGZYW/ref=sr_1_5?keywords=Force+Shield+Superlight+Sunscreen+Broad+Spectrum+SPF+30&qid=1670922231&sr=8-5")
 force_spf.category = spf
 force_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670858598/9_bxwobc.jpg")
 force_spf.photo.attach(io: force_spf_file, filename: "nes.jpg", content_type: "image/jpg")
