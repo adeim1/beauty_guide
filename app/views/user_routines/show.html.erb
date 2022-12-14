@@ -13,10 +13,8 @@
               <% end %>
               </div>
             <p><%= f.product.name %></p>
-              <div class="price">
-                <%= f.product.price %>
-              </div>
-            <%= link_to "BUY", f.product.products_url %>
+              <%#= f.product.price %>
+            <%= link_to "Buy from #{ f.product.price} $", f.product.products_url %>
           </div>
         <% end %>
       </div>

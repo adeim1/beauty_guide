@@ -1,4 +1,4 @@
-<div class= "home" style="background-image: url('<%= asset_path "foto_home.png" %>');min-height: 90vh ">
+<div class= "home-categories" style="background-image: url('<%= asset_path "foto_home.png" %>');min-height: 90vh ">
   <div class="category-container" style="height: 100%;">
     <%  @category.products.each do |product| %>
       <div class= "category-product-card">
@@ -9,9 +9,9 @@
         </div>
         <p><%= product.name %></p>
               <div class="price">
-                <%= product.price %>
+                <%= link_to "Buy from #{ product.price} $", product.products_url %>
               </div>
-            <%= link_to "BUY", product.products_url %>
+            <%# <%= link_to "BUY", product.products_url %> 
       </div>
     <% end %>
   </div>
