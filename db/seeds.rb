@@ -371,7 +371,7 @@ sun_bum_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v
 sun_bum_spf.photo.attach(io: sun_bum_spf_file, filename: "nes.jpg", content_type: "image/jpg")
 sun_bum_spf.save!
 
-beauty_of_joseon_spf = Product.new(name: "Beauty of Joseon Relief Sun: Rice + Probiotic spf 50", price: 15.50, products_url: "https://www.amazon.com/Beauty-Joseon-Relief-50ml-1-69fl-oz/dp/B09JVNZVH3/ref=sr_1_1?crid=ATT8TOIZW2G7&keywords=Beauty+of+Joseon+Relief+Sun%3A+Rice&qid=1670924319&sprefix=beauty+of+joseon+relief+sun+rice+%2Caps%2C668&sr=8-1")
+beauty_of_joseon_spf = Product.new(name: "Beauty of Joseon Relief Sun spf 50", price: 15.50, products_url: "https://www.amazon.com/Beauty-Joseon-Relief-50ml-1-69fl-oz/dp/B09JVNZVH3/ref=sr_1_1?crid=ATT8TOIZW2G7&keywords=Beauty+of+Joseon+Relief+Sun%3A+Rice&qid=1670924319&sprefix=beauty+of+joseon+relief+sun+rice+%2Caps%2C668&sr=8-1")
 beauty_of_joseon_spf.category = spf
 beauty_of_joseon_spf_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670842525/211013_Reliefsun_980x_b1da8bc0-504b-40e1-928b-d9fe05da5fd0_zrbjxk.jpg")
 beauty_of_joseon_spf.photo.attach(io: beauty_of_joseon_spf_file, filename: "nes.jpg", content_type: "image/jpg")
