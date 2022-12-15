@@ -228,7 +228,7 @@ naturium_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/up
 naturium_cleanser.photo.attach(io: naturium_cleanser_file, filename: "nes.jpg", content_type: "image/jpg")
 naturium_cleanser.save!
 
-hyram_cleanser = Product.new(name: "Selfless by Hyram Centella & Green Tea Daily Gel Cleanser", price: 28, products_url: "https://www.amazon.com/Selfless-Hyram-Centella-Hydrating-Cleanser/dp/B09CFTNLZ2/ref=sr_1_1?crid=2P5ZJFWGL8MWN&keywords=elfless+by+Hyram+Centella+%26+Green+Tea+Daily+Gel+Cleanser&qid=1670926186&sprefix=elfless+by+hyram+centella+%26+green+tea+daily+gel+cleanser%2Caps%2C293&sr=8-1")
+hyram_cleanser = Product.new(name: "Selfless by Hyram Centella Cleanser", price: 28, products_url: "https://www.amazon.com/Selfless-Hyram-Centella-Hydrating-Cleanser/dp/B09CFTNLZ2/ref=sr_1_1?crid=2P5ZJFWGL8MWN&keywords=elfless+by+Hyram+Centella+%26+Green+Tea+Daily+Gel+Cleanser&qid=1670926186&sprefix=elfless+by+hyram+centella+%26+green+tea+daily+gel+cleanser%2Caps%2C293&sr=8-1")
 hyram_cleanser.category = cleanser
 hyram_cleanser_file = URI.open("https://res.cloudinary.com/djnrlqbrq/image/upload/v1670874709/13659060-1934938910509717_d7788j.webp")
 hyram_cleanser.photo.attach(io: hyram_cleanser_file, filename: "nes.webp", content_type: "image/webp")
