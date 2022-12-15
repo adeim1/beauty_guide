@@ -52,6 +52,27 @@ h2 {
   margin-right: 111px;
 }
 
+.image-three {
+  width: 520px;
+  margin-top: 178px;
+  object-fit: cover;
+  margin-right: 111px;
+}
+
+.image-four {
+  width: 520px;
+  margin-top: 56px;
+  object-fit: cover;
+  margin-right: 111px;
+}
+
+.image-five {
+  width: 520px;
+  margin-top: 56px;
+  object-fit: cover;
+  margin-right: 111px;
+}
+
 .card-product p {
   // font-size: 12px;
   // line-height: 1.4;
@@ -83,14 +104,39 @@ h2 {
 .cleanser {
   padding: 35px;
 }
-.toner {
 
+.toner {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: -77px;
+}
+
+.toner-info {
   padding: 35px;
+  margin-top: 19px;
 }
 
 .cream {
   padding: 35px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
 }
+
+.spf {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: -77px;
+}
+
+.spf-info {
+  padding: 35px;
+  // margin-top: -104px;
+}
+
 
 .spf {
 
