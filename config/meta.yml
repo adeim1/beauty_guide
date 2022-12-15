@@ -1,0 +1,5 @@
+meta_product_name: "SAYS"
+meta_title: "SAYS - www.sayskin.me"
+meta_description: "Find your personalized basic skin care routine in 2 minutes"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@sayskin.me"   # required for Twitter Cards
